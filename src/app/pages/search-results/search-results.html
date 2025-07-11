@@ -1,0 +1,27 @@
+<p>search-results works!</p>
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    (input)="onSearch()"
+    placeholder="Search for products..."
+    class="search-input"
+  />
+
+  <div *ngIf="filteredProducts.length > 0; else noResults">
+    <h5 class="result-heading">Search Results for "{{ searchQuery }}"</h5>
+    <div class="results-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <h6 class="product-title">{{ product.name }}</h6>
+        <p class="product-description">{{ product.description }}</p>
+        <strong class="product-price">₹{{ product.price }}</strong>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noResults>
+    <div *ngIf="searchQuery" class="no-result-msg">
+      No products found for "{{ searchQuery }}"
+    </div>
+  </ng-template>
+</div>

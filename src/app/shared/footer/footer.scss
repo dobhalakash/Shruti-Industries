@@ -1,0 +1,42 @@
+.footer {
+  background-color: #212529; // Bootstrap dark
+  color: #ffffff;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+
+  h5, h6 {
+    color: #ffc107; // Bootstrap warning yellow
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 0.4rem;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+
+  hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 1.5rem 0;
+  }
+
+  .text-center {
+    font-size: 13px;
+    color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      text-align: center;
+
+      > div {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

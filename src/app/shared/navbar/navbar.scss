@@ -1,0 +1,108 @@
+/* Navbar container */
+.navbar {
+  background-color: #82e7e7;
+  padding: 0.5rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Navigation links container */
+.custom-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+/* Individual nav item */
+.nav-item {
+  display: flex;
+}
+
+/* Link styles */
+.nav-link {
+  display: block;
+  padding: 8px 14px;
+  margin: 0 6px;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #ffffff !important;
+  font-weight: 500;
+  text-align: center;
+  background-color: #212529;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  min-width: 90px;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  background-color: #ffc107;
+  color: #000 !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+/* Unique background colors for nav items */
+.navbar-nav .nav-item:nth-child(1) .nav-link { background-color: #0d6efd; }  /* Home */
+.navbar-nav .nav-item:nth-child(2) .nav-link { background-color: #198754; }  /* About */
+.navbar-nav .nav-item:nth-child(3) .nav-link { background-color: #dc3545; }  /* Contact */
+.navbar-nav .nav-item:nth-child(4) .nav-link { background-color: #fd7e14; }  /* Products */
+.navbar-nav .nav-item:nth-child(5) .nav-link { background-color: #20c997; }  /* Cart */
+.navbar-nav .nav-item:nth-child(6) .nav-link { background-color: #6f42c1; }  /* Orders */
+.navbar-nav .nav-item:nth-child(7) .nav-link { background-color: #6610f2; }  /* Profile */
+.navbar-nav .nav-item:nth-child(8) .nav-link { background-color: #343a40; }  /* Admin */
+
+/* Search button */
+.ms-auto button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+    color: #000 !important;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .custom-navbar {
+    justify-content: center;
+  }
+
+  .navbar-brand span {
+    display: none;
+  }
+}.news-ticker {
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 2px solid #000;
+}

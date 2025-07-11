@@ -1,0 +1,89 @@
+<!-- 🚗 Hero Section Carousel (Updated with Medium Image Slides) -->
+<div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- Floating Profiles (unchanged) -->
+    <div class="floating-profiles">
+      <div class="profile-float-container">
+
+        <!-- Person 1 -->
+        <div class="profile-float">
+          <img src="ashok.jpg" alt="Owner" />
+          <div class="profile-name">
+            <h6>Ashok Shinde</h6>
+            <p>Sanjivani Transport Owner</p>
+          </div>
+        </div>
+
+        <!-- Person 2 -->
+        <div class="profile-float">
+          <img src="Ram.jpg" alt="Manager" />
+          <div class="profile-name">
+            <h6>Ram Gadgul</h6>
+            <p>Shruti Industries</p>
+            <p>Founder & CEO</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="d-flex justify-content-center">
+        <div class="card text-center" style="width: 60%;">
+          <img src="b1.png" class="card-img-top" style="height: 350px; object-fit: cover;" alt="Slide 1">
+          <div class="card-body bg-dark text-white">
+            <h4 class="card-title">Welcome to Shruti Industries</h4>
+            <p class="card-text">Reliable Two-Wheeler & Three-Wheeler Parts</p>
+            <a routerLink="/products" class="btn btn-warning btn-lg">Explore Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center">
+        <div class="card text-center" style="width: 60%;">
+          <img src="b2.png" class="card-img-top" style="height: 350px; object-fit: cover;" alt="Slide 2">
+          <div class="card-body bg-primary text-white">
+            <h4 class="card-title">High-Quality Automotive Parts</h4>
+            <p class="card-text">Precision Engineered for Performance</p>
+            <a routerLink="/about" class="btn btn-light btn-lg">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center">
+        <div class="card text-center" style="width: 60%;">
+          <img src="b1.png" class="card-img-top" style="height: 350px; object-fit: cover;" alt="Slide 3">
+          <div class="card-body bg-secondary text-white">
+            <h4 class="card-title">Trusted by Mechanics Nationwide</h4>
+            <p class="card-text">Delivering Durability Since 2000</p>
+            <a routerLink="/contact" class="btn btn-warning btn-lg">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<script>
+  const heroCarousel = document.querySelector('#heroCarousel');
+  new bootstrap.Carousel(heroCarousel, {
+    interval: 3000, // Auto slide every 3 seconds
+    ride: 'carousel'
+  });
+</script>

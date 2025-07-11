@@ -1,0 +1,58 @@
+<!-- 📰 News Headline Ticker -->
+<div class="news-ticker bg-warning text-dark py-2 px-3">
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+    📰 Latest: New arrivals of Engine Brackets | Discount on PVC Clamps | Bulk order benefits now available!
+  </marquee>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="/lgo.ico" alt="Shruti Industries Logo" width="40" height="40" />
+    </a>
+
+    <!-- Navigation + Search -->
+    <div class="collapse navbar-collapse w-100" id="navbarContent">
+      <div class="d-flex flex-grow-1 justify-content-between align-items-center flex-wrap">
+
+        <!-- Navigation Links with Icons -->
+        <ul class="navbar-nav custom-navbar d-flex flex-wrap justify-content-center gap-2 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/"><i class="bi bi-house-door-fill me-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about"><i class="bi bi-info-circle-fill me-1"></i>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact"><i class="bi bi-telephone-fill me-1"></i>Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products"><i class="bi bi-box-seam me-1"></i>Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart"><i class="bi bi-cart-fill me-1"></i>Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/order-history"><i class="bi bi-clock-history me-1"></i>Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/profile"><i class="bi bi-person-fill me-1"></i>Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/dashboard"><i class="bi bi-shield-lock-fill me-1"></i>Admin</a>
+          </li>
+        </ul>
+
+        <!-- Search Button -->
+        <div class="ms-auto">
+          <button class="btn btn-outline-warning" (click)="redirectToSearch()">
+            <i class="bi bi-search" style="font-size: 20px;"></i> <span class="ms-1">Search</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>

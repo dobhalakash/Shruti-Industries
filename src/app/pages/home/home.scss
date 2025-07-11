@@ -1,0 +1,125 @@
+/* 🎯 Hero Section Overlay */
+.hero-section {
+  position: relative;
+  padding: 2rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* 👤 Floating Profiles (Right Side Slide-In) */
+.profile-float-container {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-float {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px 0 0 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateX(60%);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 220px;
+}
+
+.profile-float:hover {
+  transform: translateX(0); /* Slide out on hover */
+}
+
+.profile-float img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 8px;
+  object-fit: cover;
+  border: 2px solid orange;
+}
+
+.profile-name {
+  padding: 5px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.profile-name h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+}
+
+.profile-name p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+/* 🧾 Card in Carousel (60% width center) */
+.carousel-item .card {
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.carousel-item .card-img-top {
+  height: 350px;
+  object-fit: cover;
+}
+
+/* 🎠 Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 768px) {
+  .profile-float-container {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    flex-direction: row;
+  }
+
+  .profile-float {
+    transform: translateY(0);
+    border-radius: 30px;
+    min-width: auto;
+  }
+
+  .profile-float:hover {
+    transform: scale(1.05);
+  }
+
+  .carousel-item .card {
+    width: 90% !important;
+  }
+}
