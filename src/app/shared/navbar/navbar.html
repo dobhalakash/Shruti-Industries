@@ -1,24 +1,50 @@
-<!-- 📰 News Headline Ticker -->
-<div class="news-ticker bg-warning text-dark py-2 px-3">
-  <marquee behavior="scroll" direction="left" scrollamount="6">
-    📰 Latest: New arrivals of Engine Brackets | Discount on PVC Clamps | Bulk order benefits now available!
-  </marquee>
+<!-- 🔝 Top Contact & Social Bar -->
+<div class="top-info-bar bg-dark text-light py-2 px-3 d-flex justify-content-between align-items-center flex-wrap">
+  <!-- 📞 Contact Info -->
+  <div class="contact-info">
+    <strong>Call:</strong> +91-9921197992 &nbsp; | &nbsp;
+    <strong>Email:</strong> support&#64;shrutiindustries.com
+  </div>
+
+  <!-- 📱 Social Icons -->
+  <div class="social-icons d-flex align-items-center gap-3">
+    <a href="https://instagram.com" target="_blank" class="text-light" title="Instagram">
+      <i class="bi bi-instagram" style="font-size: 1.2rem;"></i>
+    </a>
+    <a href="https://facebook.com" target="_blank" class="text-light" title="Facebook">
+      <i class="bi bi-facebook" style="font-size: 1.2rem;"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" class="text-light" title="LinkedIn">
+      <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+    </a>
+    <a href="https://youtube.com" target="_blank" class="text-light" title="YouTube">
+      <i class="bi bi-youtube" style="font-size: 1.2rem;"></i>
+    </a>
+  </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
-  <div class="container-fluid d-flex align-items-center justify-content-between">
 
-    <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center" routerLink="/">
-      <img src="/lgo.ico" alt="Shruti Industries Logo" width="40" height="40" />
+<!-- 🌐 Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+  <div class="container-fluid">
+
+    <!-- 🔷 Logo -->
+    <a class="navbar-brand d-flex align-items-center me-3" routerLink="/">
+      <img src="/lgo.ico" alt="Shruti Industries Logo" width="60" height="60" />
     </a>
 
-    <!-- Navigation + Search -->
-    <div class="collapse navbar-collapse w-100" id="navbarContent">
-      <div class="d-flex flex-grow-1 justify-content-between align-items-center flex-wrap">
+    <!-- ✅ Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Navigation Links with Icons -->
-        <ul class="navbar-nav custom-navbar d-flex flex-wrap justify-content-center gap-2 mb-2 mb-lg-0">
+    <!-- 🔗 Navbar Links and Search -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <div class="d-flex align-items-center justify-content-between w-100 flex-wrap">
+
+        <!-- 🧭 Navigation Links -->
+        <ul class="navbar-nav custom-navbar d-flex align-items-center flex-wrap justify-content-center gap-2 mb-2 mb-lg-0 flex-grow-1">
           <li class="nav-item">
             <a class="nav-link" routerLink="/"><i class="bi bi-house-door-fill me-1"></i>Home</a>
           </li>
@@ -28,15 +54,45 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/contact"><i class="bi bi-telephone-fill me-1"></i>Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/products"><i class="bi bi-box-seam me-1"></i>Products</a>
+
+          <!-- 🔽 Products Dropdown -->
+          <li class="nav-item dropdown dropdown-products">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button">
+              <i class="bi bi-box-seam me-1"></i> Products <span class="toggle-icon">+</span>
+            </a>
+            <ul class="dropdown-menu dropdown-products-menu" style="background-color: #eb6f0a;" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" routerLink="/hlt">HLT</a></li>
+              <li><a class="dropdown-item" routerLink="/lms">LMS</a></li>
+              <li><a class="dropdown-item" routerLink="/sanjivani-transport">Sanjivani Transport</a></li>
+              <li><a class="dropdown-item" routerLink="/myexamo">MyExamo</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/cart"><i class="bi bi-cart-fill me-1"></i>Cart</a>
+
+          <!-- 🔽 Services Dropdown -->
+          <li class="nav-item dropdown dropdown-services">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
+              <i class="bi bi-briefcase-fill me-1"></i> Services <span class="toggle-icon">+</span>
+            </a>
+            <ul class="dropdown-menu dropdown-services-menu" style="background-color: #b32e05;" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#">Product Development</a></li>
+              <li><a class="dropdown-item" href="#">Technology Consulting</a></li>
+              <li><a class="dropdown-item" href="#">Outsourcing</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/order-history"><i class="bi bi-clock-history me-1"></i>Orders</a>
+
+          <!-- 🔽 Insights Dropdown -->
+          <li class="nav-item dropdown dropdown-insights">
+            <a class="nav-link dropdown-toggle" href="#" id="insightsDropdown" role="button">
+              <i class="bi bi-lightbulb-fill me-1"></i> Insights <span class="toggle-icon">+</span>
+            </a>
+            <ul class="dropdown-menu dropdown-insights-menu" style="background-color: #9c27b0;" aria-labelledby="insightsDropdown">
+              <li><a class="dropdown-item" href="#">Tournaments</a></li>
+              <li><a class="dropdown-item" href="#">Success Stories</a></li>
+              <li><a class="dropdown-item" href="#">Webinar</a></li>
+              <li><a class="dropdown-item" href="#">Hiring Expectations</a></li>
+            </ul>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" routerLink="/profile"><i class="bi bi-person-fill me-1"></i>Profile</a>
           </li>
@@ -45,10 +101,10 @@
           </li>
         </ul>
 
-        <!-- Search Button -->
-        <div class="ms-auto">
-          <button class="btn btn-outline-warning" (click)="redirectToSearch()">
-            <i class="bi bi-search" style="font-size: 20px;"></i> <span class="ms-1">Search</span>
+        <!-- 🔍 Search Button -->
+        <div class="d-flex ms-3">
+          <button class="btn btn-outline-dark" (click)="redirectToSearch()">
+            <i class="bi bi-search" style="font-size: 16px;"></i> <span class="ms-1">Search</span>
           </button>
         </div>
 
@@ -56,3 +112,14 @@
     </div>
   </div>
 </nav>
+
+<!-- 📰 News Headline Ticker with Professional Font -->
+<div class="news-ticker bg-dark text-light py-2 px-3 d-flex align-items-center gap-3" style="font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;">
+  <!-- 📢 Static Announcement Label -->
+  <strong class="text-light" style="white-space: nowrap;">📢 Announcement:</strong>
+
+  <!-- 📰 Scrolling Marquee -->
+  <marquee behavior="scroll" direction="left" scrollamount="6" class="flex-grow-1">
+    📰 Latest: New arrivals of Engine Brackets | Discount on PVC Clamps | Bulk order benefits now available!
+  </marquee>
+</div>

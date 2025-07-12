@@ -1,12 +1,12 @@
-<!-- 🚗 Hero Section Carousel (Updated with Medium Image Slides) -->
-<div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+<!-- 🚗 Hero Section Carousel (Refined Layout) -->
+<div id="heroCarousel" class="carousel slide mb-5 position-relative" data-bs-ride="carousel">
   <div class="carousel-inner">
 
-    <!-- Floating Profiles (unchanged) -->
+    <!-- 👉 Floating Profiles -->
     <div class="floating-profiles">
       <div class="profile-float-container">
 
-        <!-- Person 1 -->
+        <!-- Profile 1 -->
         <div class="profile-float">
           <img src="ashok.jpg" alt="Owner" />
           <div class="profile-name">
@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <!-- Person 2 -->
+        <!-- Profile 2 -->
         <div class="profile-float">
           <img src="Ram.jpg" alt="Manager" />
           <div class="profile-name">
@@ -27,63 +27,180 @@
 
       </div>
     </div>
-
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <div class="d-flex justify-content-center">
-        <div class="card text-center" style="width: 60%;">
-          <img src="b1.png" class="card-img-top" style="height: 350px; object-fit: cover;" alt="Slide 1">
-          <div class="card-body bg-dark text-white">
-            <h4 class="card-title">Welcome to Shruti Industries</h4>
-            <p class="card-text">Reliable Two-Wheeler & Three-Wheeler Parts</p>
-            <a routerLink="/products" class="btn btn-warning btn-lg">Explore Products</a>
+<!-- 🚗 Hero Section with Right-Aligned Info -->
+<div class="container my-5">
+  <div class="row align-items-center">
+  
+    <!-- 🖼️ Carousel (Left Side) -->
+    <div class="col-md-6">
+      <div id="heroCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        
+          <!-- 🌟 Slide 1 -->
+          <div class="carousel-item active">
+            <img src="E4.jpg" class="d-block w-100 rounded" style="height: 330px; object-fit: cover;" alt="Slide 1">
+          </div>
+          
+          <!-- 🌟 Slide 2 -->
+          <div class="carousel-item">
+            <img src="E2.jpg" class="d-block w-100 rounded" style="height: 330px; object-fit: cover;" alt="Slide 2">
+          </div>
+          
+          <!-- 🌟 Slide 3 -->
+          <div class="carousel-item">
+            <img src="E1.jpg" class="d-block w-100 rounded" style="height: 330px; object-fit: cover;" alt="Slide 3">
           </div>
         </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center">
-        <div class="card text-center" style="width: 60%;">
-          <img src="b2.png" class="card-img-top" style="height: 350px; object-fit: cover;" alt="Slide 2">
-          <div class="card-body bg-primary text-white">
-            <h4 class="card-title">High-Quality Automotive Parts</h4>
-            <p class="card-text">Precision Engineered for Performance</p>
-            <a routerLink="/about" class="btn btn-light btn-lg">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- 📝 Info Content (Right Side) -->
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm">
 
-    <!-- Slide 3 -->
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center">
-        <div class="card text-center" style="width: 60%;">
-          <img src="b1.png" class="card-img-top" style="height: 350px; object-fit: cover;" alt="Slide 3">
-          <div class="card-body bg-secondary text-white">
-            <h4 class="card-title">Trusted by Mechanics Nationwide</h4>
-            <p class="card-text">Delivering Durability Since 2000</p>
-            <a routerLink="/contact" class="btn btn-warning btn-lg">Contact Us</a>
-          </div>
-        </div>
+    
+        <h3 class="bi-person-lines-fill me-2" src="lgo.ico"> ABOUT SHRUTI INDUSTRIES</h3>
+        <p style="text-align: justify;">
+          <strong>Shruti Industries</strong> is a dynamic and diversified enterprise, actively operating across <strong>automotive</strong>, <strong>information technology</strong>, and <strong>transportation sectors</strong> with multiple cutting-edge projects under its belt. 
+          <br><br>
+          In the <strong>automotive sector</strong>, we are proud manufacturers of precision-engineered components for two and three-wheelers, including <em>Engine Brackets, PVC Clamps, Magnet Puller Plates, Z Brackets, Cable Clips</em>, and more — all designed to meet the evolving demands of leading OEMs and aftermarket clients.
+          <br><br>
+          Our <strong>IT division</strong> is at the forefront of innovation, building scalable digital platforms such as <em>LMS (Learning Management System)</em> for education, <em>HLT (Hot Lead Tracker)</em> for sales pipeline management, and <em>Examo</em>, a robust online examination system tailored for institutions and training providers.
+          <br><br>
+          In the <strong>transportation domain</strong>, we operate under the brand <em>Sanjivani</em>, managing a fleet of <strong>22 commercial vehicles</strong> that ensure seamless logistics and cargo movement across India, reinforcing our reputation for reliability and nationwide reach.
+          <br><br>
+          With a firm commitment to quality, technology, and customer satisfaction, Shruti Industries continues to shape the future across every industry we serve.
+        </p>
       </div>
     </div>
 
   </div>
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
 </div>
+
+<!-- 🎬 Auto Slide Script -->
 <script>
   const heroCarousel = document.querySelector('#heroCarousel');
   new bootstrap.Carousel(heroCarousel, {
-    interval: 3000, // Auto slide every 3 seconds
+    interval: 3000,
     ride: 'carousel'
   });
 </script>
+
+<!-- 🌟 Testimonial Section -->
+<section class="testimonial-section my-5">
+  <div class="container">
+    <h3 class="bi bi-chat-quote-fill me-2">What Our Clients Say</h3>
+    <div class="row">
+
+      <!-- Testimonial 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Shruti Industries has been our trusted partner in automotive components. Their attention to detail and timely delivery has helped us streamline our production."</p>
+            <div class="d-flex align-items-center mt-4">
+              <img src="A1.jpg" class="rounded-circle me-3" width="50" height="50" alt="Client 1">
+              <div>
+                <h6 class="mb-0">Rajeev Mehta</h6>
+                <small class="text-muted">Auto Parts Supplier</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"We use their Examo platform for all our mock tests and assessments. The interface is seamless and the support is top-notch."</p>
+            <div class="d-flex align-items-center mt-4">
+              <img src="dr.jpg" class="rounded-circle me-3" width="50" height="50" alt="Client 2">
+              <div>
+                <h6 class="mb-0">Dr. Neha Kulkarni</h6>
+                <small class="text-muted">EdTech Consultant</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <p class="card-text">"Our logistics operations have improved significantly after onboarding Sanjivani Transport. Their nationwide service is prompt and professional."</p>
+            <div class="d-flex align-items-center mt-4">
+              <img src="R1.jpg" class="rounded-circle me-3" width="50" height="50" alt="Client 3">
+              <div>
+                <h6 class="mb-0">Sanjay Rawat</h6>
+                <small class="text-muted">Logistics Manager</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+  
+</section>
+<!-- 🧑‍💼 Founder’s Message -->
+<section class="founder-message-section my-5">
+  <div class="container bg-light p-4 rounded shadow-sm">
+    <div class="row align-items-center">
+      <div class="col-md-2 text-center mb-3 mb-md-0">
+        <img src="Ram.jpg" class="rounded-circle border border-dark" width="100" height="100" alt="Founder Image" />
+      </div>
+      <div class="col-md-10">
+        <h3 class="bi bi-person-video2 me-2"> FOUNDER’S MESSAGE</h3>
+        <p><strong>Mr. Ram Gadgul</strong>, Founder & Director</p>
+        <blockquote class="blockquote ps-3 border-start border-3 border-primary">
+          <p class="mb-0">“We believe quality is not a goal — it's a habit. At Shruti Industries, we ensure every product that leaves our factory carries the strength of our commitment and the pride of Indian manufacturing.”</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📈 Clientele Timeline -->
+<section class="timeline-section my-5">
+  <div class="container bg-light p-4 rounded shadow-sm">
+    <h3 class="bi bi-graph-up-arrow me-2"> OUR JOURNEY & CLIENTELE (2004 - 2025)</h3>
+    <div class="timeline-slider d-flex overflow-auto gap-4 pt-3 pb-2">
+      
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item text-center flex-shrink-0" style="width: 200px;">
+        <img src="01.png" class="img-fluid mb-2" alt="2004" />
+        <p><strong>2004</strong><br>Inception & First OEM Tie-up</p>
+      </div>
+
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item text-center flex-shrink-0" style="width: 200px;">
+        <img src="02.png" class="img-fluid mb-2" alt="2010" />
+        <p><strong>2010</strong><br>Expanded to PVC Cable Clip Manufacturing</p>
+      </div>
+
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item text-center flex-shrink-0" style="width: 200px;">
+        <img src="03.png" class="img-fluid mb-2" alt="2017" />
+        <p><strong>2017</strong><br>ISO Certification & Increased Production Capacity</p>
+      </div>
+
+      <!-- Timeline Item 4 -->
+      <div class="timeline-item text-center flex-shrink-0" style="width: 200px;">
+        <img src="01.png" class="img-fluid mb-2" alt="2025" />
+        <p><strong>2025</strong><br>Serving 50+ Clients Globally with Advanced Solutions</p>
+      </div>
+      
+    </div>
+  </div>
+</section>

@@ -1,108 +1,188 @@
-/* Navbar container */
+/* 🌐 Navbar Container */
 .navbar {
   background-color: #82e7e7;
   padding: 0.5rem 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-
-    img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-    }
-
-    span {
-      font-size: 18px;
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 
-/* Navigation links container */
+/* 🔷 Brand */
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.navbar .navbar-brand img {
+  width: auto;
+  height: 100px;
+  object-fit: contain;
+}
+.navbar .navbar-brand span {
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* 🔗 Navigation Links */
 .custom-navbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
-
-/* Individual nav item */
 .nav-item {
   display: flex;
+  margin: 0;
 }
 
-/* Link styles */
+/* 🔗 Uniform Nav Link Styling */
 .nav-link {
-  display: block;
-  padding: 8px 14px;
-  margin: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 37px;
+  padding: 0;
+  margin: 0 2px;
   border-radius: 6px;
   font-size: 15px;
-  color: #ffffff !important;
   font-weight: 500;
   text-align: center;
   background-color: #212529;
+  color: #fff !important;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  min-width: 90px;
 }
 
-/* Hover effect */
+/* ✨ Hover Effect */
 .nav-link:hover {
-  background-color: #ffc107;
+  background-color: #d6d4cd;
   color: #000 !important;
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  box-shadow: 0 0 10px rgba(196, 189, 168, 0.5);
 }
 
-/* Unique background colors for nav items */
+/* 🎨 Unique Background Colors for nav items */
 .navbar-nav .nav-item:nth-child(1) .nav-link { background-color: #0d6efd; }  /* Home */
 .navbar-nav .nav-item:nth-child(2) .nav-link { background-color: #198754; }  /* About */
 .navbar-nav .nav-item:nth-child(3) .nav-link { background-color: #dc3545; }  /* Contact */
 .navbar-nav .nav-item:nth-child(4) .nav-link { background-color: #fd7e14; }  /* Products */
-.navbar-nav .nav-item:nth-child(5) .nav-link { background-color: #20c997; }  /* Cart */
-.navbar-nav .nav-item:nth-child(6) .nav-link { background-color: #6f42c1; }  /* Orders */
-.navbar-nav .nav-item:nth-child(7) .nav-link { background-color: #6610f2; }  /* Profile */
-.navbar-nav .nav-item:nth-child(8) .nav-link { background-color: #343a40; }  /* Admin */
 
-/* Search button */
+.navbar-nav .nav-item:nth-child(5) .nav-link { background-color: #b32e05; }  /* Services */
+.navbar-nav .nav-item:nth-child(6) .nav-link { background-color: #9c27b0; } /* Insights */
+.navbar-nav .nav-item:nth-child(7) .nav-link { background-color: #6610f2; }  /* Profile */
+.navbar-nav .nav-item:nth-child(8) .nav-link { background-color: #afab3d; }  /* Admin */
+
+/* 🔍 Search Button */
+.ms-auto button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(234, 238, 238, 0.5);
+}
 .ms-auto button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px;
+  width: 104px;
+  height: 40px;
+  padding: 0;
   border-radius: 6px;
-    color: #000 !important;
+  background-color: #a89f81;
+  color: #000 !important;
+  font-weight: 500;
+  font-size: 15px;
+ transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .custom-navbar {
-    justify-content: center;
+.news-ticker {
+  font-weight: bold;
+  font-size: 1rem;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+/* 🔽 Dropdown Hover Behavior */
+.navbar .nav-item.dropdown {
+  position: relative;
+}
+.navbar .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  top: 100%;
+  left: 0;
+  margin-top: 0;
+  z-index: 1000;
+}
+
+/* 📄 Dropdown Menu Styling */
+.navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Dropdown Items */
+.navbar .dropdown-menu .dropdown-item {
+  color: #fff;
+  padding: 10px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #f3f4ed;
+  color: #000;
+  font-weight: 600;
+}
+
+/* ➕➖ Toggle Icon for Dropdown */
+.nav-item.dropdown .toggle-icon {
+  font-weight: bold;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  color: #fff;
+}
+.nav-item.dropdown:hover .toggle-icon::after {
+  content: "−";
+  color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nav-item.dropdown:hover .toggle-icon {
+  color: transparent;
+  position: relative;
+}
+
+
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 10px;
   }
 
   .navbar-brand span {
     display: none;
   }
-}.news-ticker {
-  font-weight: bold;
-  font-size: 1rem;
-  border-bottom: 2px solid #000;
+
+  .navbar .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .ms-auto {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+  }
 }

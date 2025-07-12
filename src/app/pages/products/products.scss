@@ -1,0 +1,27 @@
+/* Navbar Dropdown Styling */
+.navbar .dropdown-menu {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  background-color: #fff;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  font-weight: 500;
+  color: #333;
+  padding: 0.5rem 1.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* Dropdown toggle icon spacing */
+.navbar .dropdown-toggle::after {
+  margin-left: 0.5rem;
+}
