@@ -25,7 +25,7 @@
 
 
 <!-- 🌐 Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+<nav class="navbar navbar-expand-lg navbar-darkt bg-dark px-3">
   <div class="container-fluid">
 
     <!-- 🔷 Logo -->
@@ -103,7 +103,7 @@
 
         <!-- 🔍 Search Button -->
         <div class="d-flex ms-3">
-          <button class="btn btn-outline-dark" (click)="redirectToSearch()">
+          <button class="btn btn-outline-light" (click)="redirectToSearch()">
             <i class="bi bi-search" style="font-size: 16px;"></i> <span class="ms-1">Search</span>
           </button>
         </div>
@@ -112,14 +112,16 @@
     </div>
   </div>
 </nav>
-
 <!-- 📰 News Headline Ticker with Professional Font -->
-<div class="news-ticker bg-dark text-light py-2 px-3 d-flex align-items-center gap-3" style="font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;">
+<div class="news-ticker bg-danger text-light py-2 px-3 d-flex align-items-center gap-3" style="font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;">
+
   <!-- 📢 Static Announcement Label -->
-  <strong class="text-light" style="white-space: nowrap;">📢 Announcement:</strong>
+  <strong class="text-warning" style="white-space: nowrap;"> ANNOUNCEMENT:</strong>
 
   <!-- 📰 Scrolling Marquee -->
   <marquee behavior="scroll" direction="left" scrollamount="6" class="flex-grow-1">
-    📰 Latest: New arrivals of Engine Brackets | Discount on PVC Clamps | Bulk order benefits now available!
+
+    <span class="text-warning"> 🚚 Latest New arrivals of Engine Brackets Discount on PVC Clamps Bulk order benefits now available!</span>
+
   </marquee>
 </div>
