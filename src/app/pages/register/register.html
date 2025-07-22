@@ -1,0 +1,92 @@
+<div class="page-wrapper">
+  <!-- Animated Background -->
+  <div class="animated-bg">
+   
+    
+    <!-- Particle Burst Effect -->
+    <div class="particle-burst" [class.active]="showParticleBurst">
+      <div class="particle" *ngFor="let particle of particles"
+           [style.left.px]="particle.x"
+           [style.top.px]="particle.y"
+           [style.animation-delay.s]="particle.delay">
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo -->
+ 
+
+  <!-- Success Overlay -->
+  <div class="success-overlay" [class.show]="registrationSuccess">
+    <div class="success-content">
+      <i class="bi bi-check-circle-fill success-icon"></i>
+      <h2>Registration Successful!</h2>
+      <p>Welcome! Your account has been created.</p>
+    </div>
+  </div>
+
+  <!-- Register Container -->
+  <div class="register-container slide-up" [class.success]="registrationSuccess">
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm()" class="register-form">
+      <h2>Create Account</h2>
+
+      <div class="input-group">
+        <label for="name">Name</label>
+        <div class="input-wrapper">
+          <i class="bi bi-person-fill input-icon"></i>
+          <input id="name" type="text" formControlName="name" placeholder="Enter your name" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <div class="input-wrapper">
+          <i class="bi bi-envelope-fill input-icon"></i>
+          <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="input-wrapper">
+          <i class="bi bi-lock-fill input-icon"></i>
+          <input id="password" type="password" formControlName="password" placeholder="Enter password" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-wrapper">
+          <i class="bi bi-shield-check-fill input-icon"></i>
+          <input id="confirmPassword" type="password" formControlName="confirmPassword" placeholder="Re-enter password" />
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid || isLoading" class="register-btn">
+        <span *ngIf="!isLoading">
+          <i class="bi bi-person-plus-fill"></i>
+          Sign Up
+        </span>
+        <span *ngIf="isLoading" class="loading-spinner">
+          <i class="bi bi-arrow-repeat spinning"></i>
+          Creating Account...
+        </span>
+      </button>
+
+      <p *ngIf="errorMessage" class="error-message">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        {{ errorMessage }}
+      </p>
+      
+      <p *ngIf="successMessage" class="success-message">
+        <i class="bi bi-check-circle-fill"></i>
+        {{ successMessage }}
+      </p>
+
+      <p class="login-link">
+        Already have an account?
+        <a routerLink="/login">Login here</a>
+      </p>
+    </form>
+  </div>
+</div>

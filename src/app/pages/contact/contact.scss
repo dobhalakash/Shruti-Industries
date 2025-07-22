@@ -1,0 +1,46 @@
+.contact-section {
+  animation: fadeInUp 1s ease-out;
+  background-color: #f8f9fa;
+
+  h2 {
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .form-control:focus {
+    border-color: #041a1f;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  }
+
+  textarea.form-control {
+    resize: vertical;
+  }
+
+  button {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #288b73;
+  }
+
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 2rem 1rem;
+    }
+  }
+}

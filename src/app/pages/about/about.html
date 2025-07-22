@@ -1,0 +1,301 @@
+<div class="carousel-wrapper"> <div id="mainHeroCarouselInner" class="carousel slide slider-container mb-0" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+
+<!-- Dots / Indicators -->
+<div class="carousel-indicators slider-dots">
+  <button type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+
+<!-- Carousel Items -->
+<div class="carousel-inner slider-wrapper">
+  <div class="carousel-item active">
+    <div class="carousel-overlay"></div>
+    <img src="slider123.png" class="d-block w-100 carousel-img" alt="Slide 1">
+    <div class="carousel-caption-custom">
+      <h2 class="slide-title">Welcome to Sanjivani Transport</h2>
+      <p class="slide-subtitle">Your trusted logistics partner</p>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="carousel-overlay"></div>
+    <img src="slider123.png" class="d-block w-100 carousel-img" alt="Slide 2">
+    <div class="carousel-caption-custom">
+      <h2 class="slide-title">Reliable Transport Solutions</h2>
+      <p class="slide-subtitle">Connecting businesses nationwide</p>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="carousel-overlay"></div>
+    <img src="slider123.png" class="d-block w-100 carousel-img" alt="Slide 3">
+    <div class="carousel-caption-custom">
+      <h2 class="slide-title">Excellence in Logistics</h2>
+      <p class="slide-subtitle">Delivering success every mile</p>
+    </div>
+  </div>
+</div>
+
+<!-- Carousel Controls -->
+<button class="carousel-control-prev" type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon custom-control-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide="next">
+  <span class="carousel-control-next-icon custom-control-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div> </div> 
+
+
+<!-- Animated Background Elements --> <div class="animated-background"> <div class="floating-vehicles"> <i class="bi bi-truck floating-vehicle" style="left: 10%; animation-delay: 0s;"></i> <i class="bi bi-bus-front floating-vehicle" style="left: 30%; animation-delay: 2s;"></i> <i class="bi bi-bicycle floating-vehicle" style="left: 50%; animation-delay: 4s;"></i> <i class="bi bi-scooter floating-vehicle" style="left: 70%; animation-delay: 6s;"></i> <i class="bi bi-truck-front-fill floating-vehicle" style="left: 90%; animation-delay: 8s;"></i> </div> <div class="floating-particles"> <div class="particle" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" [style.left.%]="getRandomPosition()" [style.animation-delay.s]="getRandomDelay()"></div> </div> </div> 
+
+
+<!-- 🧑‍💼 Floating Profiles Section (outside carousel) --> <section class="floating-profiles py-1 my-0"> <div class="profile-float-container d-flex justify-content-around flex-wrap"> 
+  
+  <!-- Profile 1 --> <div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'"> <div class="profile-glow">
+  </div> <img src="ashok.jpg" class="rounded-circle mb-2" alt="Ashok Shinde" />
+   <div class="profile-name"> <h6>Ashok Shinde</h6>
+     <p>Sanjivani Transport<br><small>Founder & CEO</small></p> </div>
+      <div class="profile-badge"> <i class="bi bi-award-fill"></i> </div> </div>
+<!-- Profile 2 -->
+<div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.2s;">
+  <div class="profile-glow"></div>
+  <img src="Ram.jpg" class="rounded-circle mb-2" alt="Ram Gadgul" />
+  <div class="profile-name">
+    <h6>Ram Gadgul</h6>
+    <p>Shruti Industries<br><small>Founder & CEO</small></p>
+  </div>
+  <div class="profile-badge">
+    <i class="bi bi-gear-fill"></i>
+  </div>
+</div>
+
+<!-- Profile 3 -->
+<div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.4s;">
+  <div class="profile-glow"></div>
+  <img src="suraj.jpg" class="rounded-circle mb-2" alt="Suraj Dobhal" />
+  <div class="profile-name">
+    <h6>Suraj Dobhal</h6>
+    <p>APAS Soft Tech<br><small>Founder & CEO</small></p>
+  </div>
+  <div class="profile-badge">
+    <i class="bi bi-laptop-fill"></i>
+  </div>
+</div>
+
+<!-- Profile 4 -->
+<div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.6s;">
+  <div class="profile-glow"></div>
+  <img src="payal.jpg" class="rounded-circle mb-2" alt="Payal Rajput" />
+  <div class="profile-name">
+    <h6>Payal Rajput</h6>
+    <p>RxMart<br><small>Founder & CEO</small></p>
+  </div>
+  <div class="profile-badge">
+    <i class="bi bi-heart-pulse-fill"></i>
+  </div>
+</div>
+</div> </section>
+ <!-- 💬 Chatbot Floating Button --> <a class="chatbot-button pulse-animation" href="/contact" title="Chat with Us"> <i class="bi bi-chat-dots-fill"></i> <span class="button-text">Chat</span> <div class="button-ripple"></div> </a> 
+  
+ <!-- 🔐 Floating Login Button --> <a class="login-button pulse-animation" href="/login" title="Login"> <i class="bi bi-box-arrow-in-right"></i> <span class="button-text">Login</span> <div class="button-ripple"></div> </a> 
+  <!-- 🚀 Shruti Group Business Verticals -->
+
+<div class="about-container" [@fadeInUp]>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title" [@slideInLeft]>About Us</h1>
+      <p class="hero-subtitle" [@slideInRight]>Discover our story, mission, and the passionate team behind our success</p>
+    </div>
+    <div class="hero-background"></div>
+  </section>
+
+<section class="tech-About-container" style="font-family: 'Segoe UI', 'Open Sans', sans-serif; letter-spacing: 0.3px; line-height: 1.7;"> <div class="marquee-wrapper"> <div class="tech-marquee"> <div class="tech-item" onclick="location.href='https://example.com/sevaconnect';"> <div class="tech-item-glow"></div> <div class="tech-icon-wrapper"> <i class="bi bi-people-fill" style="font-size: 2rem; color: #004d61;"></i> <div class="icon-pulse"></div> </div> <p><strong>SevaConnect Foundation</strong><br><small>Social Welfare & NGO Initiatives</small></p> <div class="hover-arrow"> <i class="bi bi-arrow-right"></i> </div> </div>
+
+  <div class="tech-item" onclick="location.href='https://example.com/shrutipro';">
+    <div class="tech-item-glow"></div>
+    <div class="tech-icon-wrapper">
+      <i class="bi bi-gear-fill" style="font-size: 2rem; color: #006478;"></i>
+      <div class="icon-pulse"></div>
+    </div>
+    <p><strong>ShrutiPro Services</strong><br><small>Technical & Industrial Solutions</small></p>
+    <div class="hover-arrow">
+      <i class="bi bi-arrow-right"></i>
+    </div>
+  </div>
+  
+  <div class="tech-item" onclick="location.href='https://example.com/learnedge';">
+    <div class="tech-item-glow"></div>
+    <div class="tech-icon-wrapper">
+      <i class="bi bi-person-video3" style="font-size: 2rem; color: #00788c;"></i>
+      <div class="icon-pulse"></div>
+    </div>
+    <p><strong>LearnEdge Academy</strong><br><small>Training & Professional Institutes</small></p>
+    <div class="hover-arrow">
+      <i class="bi bi-arrow-right"></i>
+    </div>
+  </div>
+  
+  <div class="tech-item" onclick="location.href='https://example.com/autocraft';">
+    <div class="tech-item-glow"></div>
+    <div class="tech-icon-wrapper">
+      <i class="bi bi-tools" style="font-size: 2rem; color: #00788c;"></i>
+      <div class="icon-pulse"></div>
+    </div>
+    <p><strong>AutoCraft Division</strong><br><small>Automotive Parts & Engineering</small></p>
+    <div class="hover-arrow">
+      <i class="bi bi-arrow-right"></i>
+    </div>
+  </div>
+  
+  <div class="tech-item" onclick="location.href='https://example.com/logistics';">
+    <div class="tech-item-glow"></div>
+    <div class="tech-icon-wrapper">
+      <i class="bi bi-truck-front-fill" style="font-size: 2rem; color: #00a3a5;"></i>
+      <div class="icon-pulse"></div>
+    </div>
+    <p><strong>Sanjivani Logistics</strong><br><small>Pan-India Transport & Supply Chain</small></p>
+    <div class="hover-arrow">
+      <i class="bi bi-arrow-right"></i>
+    </div>
+  </div>
+  
+  <div class="tech-item" onclick="location.href='https://example.com/rxmedimart';">
+    <div class="tech-item-glow"></div>
+    <div class="tech-icon-wrapper">
+      <i class="bi bi-capsule-pill" style="font-size: 2rem; color: #00b5a6;"></i>
+      <div class="icon-pulse"></div>
+    </div>
+    <p><strong>RXMediMart</strong><br><small>Pharmaceuticals & Health Essentials</small></p>
+    <div class="hover-arrow">
+      <i class="bi bi-arrow-right"></i>
+    </div>
+  </div>
+  
+  <!-- Duplicate for seamless scroll -->
+  <div class="tech-item" onclick="location.href='https://example.com/sevaconnect';">
+    <div class="tech-item-glow"></div>
+    <div class="tech-icon-wrapper">
+      <i class="bi bi-people-fill" style="font-size: 2rem; color: #004d61;"></i>
+      <div class="icon-pulse"></div>
+    </div>
+    <p><strong>SevaConnect Foundation</strong><br><small>Social Welfare & NGO Initiatives</small></p>
+    <div class="hover-arrow">
+      <i class="bi bi-arrow-right"></i>
+    </div>
+  </div>
+</div>
+</div> </section> <!-- Success Modal --> <div class="modal-overlay" [class.show]="showSuccessModal" (click)="closeModal()"> <div class="success-modal" (click)="$event.stopPropagation()"> <div class="modal-content"> <i class="bi bi-check-circle-fill success-icon"></i> <h3>Success!</h3> <p>{{ successMessage }}</p> <button class="btn btn-primary" (click)="closeModal()"> <i class="bi bi-check"></i> OK </button> </div> </div> </div>
+  <!-- Company Overview -->
+  <section class="company-overview" [@fadeInUp]>
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-content">
+          <h2 class="section-title">Our Story</h2>
+          <p class="company-description">
+            Founded in 2020, Innovation Labs has been at the forefront of 
+            technological innovation. Based in San Francisco, CA, our team of 50+ 
+            dedicated professionals works tirelessly to bring cutting-edge solutions to life.
+          </p>
+          <p class="mission-statement">
+            <strong>Our Mission:</strong> To create innovative solutions that transform the way people work and live through cutting-edge technology.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item" [@fadeInUp]>
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-item" [@fadeInUp]>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Team Members</div>
+          </div>
+          <div class="stat-item" [@fadeInUp]>
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item" [@fadeInUp]>
+            <div class="stat-number">5</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title center">What Sets Us Apart</h2>
+      <div class="features-grid" [@staggerAnimation]>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3 class="feature-title">Innovation First</h3>
+          <p class="feature-description">We push the boundaries of technology to deliver groundbreaking solutions that exceed expectations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3 class="feature-title">Customer Focused</h3>
+          <p class="feature-description">Every decision we make is centered around providing exceptional value and experience to our customers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Fast & Reliable</h3>
+          <p class="feature-description">Built for speed and reliability, our solutions are designed to perform under any condition.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3 class="feature-title">Global Reach</h3>
+          <p class="feature-description">Serving customers worldwide with localized support and culturally aware solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <h2 class="section-title center">Our Core Values</h2>
+      <div class="values-grid" [@staggerAnimation]>
+        <div class="value-card">
+          <div class="value-content">
+            <h3 class="value-title">Excellence</h3>
+            <p class="value-description">We strive for excellence in everything we do, from code quality to customer service.</p>
+          </div>
+        </div>
+        <div class="value-card">
+          <div class="value-content">
+            <h3 class="value-title">Innovation</h3>
+            <p class="value-description">We embrace new technologies and methodologies to stay ahead of the curve.</p>
+          </div>
+        </div>
+        <div class="value-card">
+          <div class="value-content">
+            <h3 class="value-title">Integrity</h3>
+            <p class="value-description">We build trust through honest communication and ethical business practices.</p>
+          </div>
+        </div>
+        <div class="value-card">
+          <div class="value-content">
+            <h3 class="value-title">Collaboration</h3>
+            <p class="value-description">We believe great things happen when talented people work together towards a common goal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section" [@fadeInUp]>
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Work With Us?</h2>
+        <p class="cta-description">
+          Let's collaborate to bring your vision to life with our expertise and innovative approach.
+        </p>
+        <button class="cta-button">Get in Touch</button>
+      </div>
+    </div>
+  </section>
+</div>

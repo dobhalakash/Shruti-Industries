@@ -1,0 +1,80 @@
+<footer class="footer-container">
+  <!-- Background Effect Circles -->
+  <div class="bg-effect">
+    <div class="circle blue"></div>
+    <div class="circle purple"></div>
+  </div>
+
+  <!-- Footer Main Content -->
+  <div class="footer-content">
+    <div class="footer-grid">
+
+      <!-- Company Info -->
+      <div class="company-info">
+        <div class="logo-container">
+          <div class="logo-bg">
+            <i class="lucide lucide-zap"></i>
+          </div>
+          <div class="pulse-dot"></div>
+        </div>
+        <div>
+          <h1 class="brand-title">Shruti Industries</h1>
+          <p class="brand-subtitle">Innovation Beyond Tomorrow</p>
+        </div>
+        <p class="brand-desc">
+          Pioneering multiple high-impact technology domains, from automotive roots to cutting-edge innovations that shape the future.
+        </p>
+        <div class="contact-info">
+          <div><i class="lucide lucide-phone"></i> +91 98765 43210</div>
+          <div><i class="lucide lucide-mail"></i> infoshrutiindustries.com</div>
+          <div><i class="lucide lucide-map-pin"></i> Tech Hub, BKC, Mumbai - 400051, India</div>
+        </div>
+      </div>
+
+      <!-- Technology Domains -->
+      <div>
+        <h3>Technology Domains</h3>
+        <ul>
+          <li *ngFor="let tech of technologies">
+            <a href="#">{{ tech }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li *ngFor="let link of quickLinks">
+            <a href="#">{{ link }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter & Social -->
+      <div>
+        <h3>Stay Connected</h3>
+        <p>Subscribe to our newsletter for the latest innovations and industry insights.</p>
+        <input type="email" placeholder="Enter your email" />
+        <button>
+          Subscribe <i class="lucide lucide-arrow-right"></i>
+        </button>
+        <div class="social-icons">
+          <i class="lucide lucide-linkedin"></i>
+          <i class="lucide lucide-globe"></i>
+          <i class="lucide lucide-mail"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <span>© 2025 Shruti Industries. All rights reserved. | Pioneering Innovation Since 2002</span>
+      <div class="bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>

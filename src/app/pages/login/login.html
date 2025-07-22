@@ -1,0 +1,88 @@
+<div class="page-wrapper">
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="floating-icons">
+      <i 
+        *ngFor="let icon of floatingIcons" 
+        [class]="'bi ' + icon.icon + ' floating-icon'"
+        [style.left.px]="icon.x"
+        [style.top.px]="icon.y"
+        [style.font-size.px]="icon.size"
+        [style.transform]="'rotate(' + icon.rotation + 'deg)'"
+        [style.opacity]="icon.opacity"
+      ></i>
+    </div>
+    
+    <!-- Lightning Effects -->
+    <div class="lightning-container" [class.active]="showThunderstorm">
+      <div class="lightning lightning-1"></div>
+      <div class="lightning lightning-2"></div>
+      <div class="lightning lightning-3"></div>
+    </div>
+    
+    <!-- Rain Effect -->
+    <div class="rain-container" [class.active]="showThunderstorm">
+      <div class="rain" *ngFor="let drop of rainDrops" 
+           [style.left.%]="drop.x" 
+           [style.animation-delay.s]="drop.delay"
+           [style.animation-duration.s]="drop.duration">
+      </div>
+    </div>
+  </div>
+
+  <!-- Logo -->
+
+
+  <!-- Success Overlay -->
+  <div class="success-overlay" [class.show]="loginSuccess">
+    <div class="success-content">
+      <i class="bi bi-check-circle-fill success-icon"></i>
+      <h2>Login Successful!</h2>
+      <p>Welcome back! Redirecting...</p>
+    </div>
+  </div>
+
+  <!-- Login Container -->
+  <div class="login-container slide-up" [class.success]="loginSuccess">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form">
+      <h2>Login</h2>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <div class="input-wrapper">
+          <i class="bi bi-envelope-fill input-icon"></i>
+          <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="input-wrapper">
+          <i class="bi bi-lock-fill input-icon"></i>
+          <input id="password" type="password" formControlName="password" placeholder="Enter your password" />
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid || isLoading" class="login-btn">
+        <span *ngIf="!isLoading">
+          <i class="bi bi-box-arrow-in-right"></i>
+          Sign In
+        </span>
+        <span *ngIf="isLoading" class="loading-spinner">
+          <i class="bi bi-arrow-repeat spinning"></i>
+          Signing In...
+        </span>
+      </button>
+
+      <p *ngIf="loginError" class="error-message">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        Invalid email or password.
+      </p>
+
+      <p class="register-link">
+        Don't have an account?
+        <a routerLink="/register">Register here</a>
+      </p>
+    </form>
+  </div>
+</div>

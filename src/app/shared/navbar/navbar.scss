@@ -1,0 +1,142 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  &.scrolled {
+    background-color: #ffffffee;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #004d61;
+  cursor: pointer;
+
+  img {
+    animation: bounce 1s infinite;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background: #004d61;
+    transition: all 0.3s;
+  }
+
+  span.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  span.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  span.open:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  .nav-item {
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #004d61;
+      transition: color 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        color: #00bcd4;
+      }
+    }
+
+    input {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: 14px;
+      margin-right: 6px;
+    }
+
+    button {
+      background-color: #ccc07c;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #000;
+
+      i {
+        font-size: 16px;
+      }
+
+      &:hover {
+        background-color: #b5a564;
+      }
+    }
+  }
+
+  &.active {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+}

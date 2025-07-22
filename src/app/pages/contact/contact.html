@@ -1,0 +1,42 @@
+<section class="contact-section py-5 bg-light" id="contact" [@fadeInUp]>
+  <div class="container">
+    <h2 class="text-center mb-4 text-warning">GET IN TOUCH</h2>
+    <p class="text-center text-muted mb-4">
+      Want us to call you back? Fill the form below and we’ll arrange a callback shortly.
+    </p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control" placeholder="Name"
+                   [(ngModel)]="contactForm.name" name="name" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Your Email</label>
+            <input type="email" class="form-control" placeholder="Email"
+                   [(ngModel)]="contactForm.email" name="email" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" placeholder="10-digit Mobile Number"
+                   [(ngModel)]="contactForm.phone" name="phone"
+                   pattern="^[0-9]{10}$" maxlength="10"
+                   required title="Please enter a valid 10-digit phone number." />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea rows="3" class="form-control" placeholder="Message"
+                      [(ngModel)]="contactForm.message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-warning w-100">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
