@@ -61,9 +61,10 @@ export class Home implements OnInit, OnDestroy {
   ];
 
   ngOnInit() {
+  if (typeof window !== 'undefined') {
     this.initializeFloatingIcons();
-    this.startAnimation();
   }
+}
 
   ngOnDestroy() {
     if (this.animationFrame) {
