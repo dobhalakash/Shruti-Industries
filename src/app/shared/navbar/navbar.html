@@ -1,9 +1,10 @@
 <nav [class.scrolled]="isScrolled" class="navbar-container">
   <div class="navbar-content">
+
     <!-- 🔷 Logo -->
     <div class="logo" (click)="handleNavClick('/')">
-      <img src="/lgo.ico" alt="Shruti Industries Logo" width="50" height="50" />
-      <span>ShrutiOne.com</span>
+      <img src="/APAS.png" alt="Shruti Industries Logo" width="80" height="50" />
+      <span>apasOne.com</span>
     </div>
 
     <!-- 🍔 Hamburger -->
@@ -15,15 +16,24 @@
 
     <!-- 🔗 Navigation Links -->
     <ul class="nav-links" [class.active]="isMenuOpen">
-      <li class="nav-item"><a (click)="handleNavClick('/')">Home</a></li>
-      <li class="nav-item"><a (click)="handleNavClick('/about')">About</a></li>
-      <li class="nav-item"><a (click)="handleNavClick('/products')">Products</a></li>
-      <li class="nav-item"><a (click)="handleNavClick('/services')">Services</a></li>
-      <li class="nav-item"><a (click)="handleNavClick('/insights')">Insights</a></li>
-      <li class="nav-item"><a (click)="handleNavClick('/admin/dashboard')">Admin</a></li>
+      <li class="nav-item animate__animated animate__fadeInDown">
+        <a (click)="handleNavClick('/')"><i class="bi bi-house-door-fill me-2"></i>Home</a>
+      </li>
+      <li class="nav-item animate__animated animate__fadeInDown animate__delay-1s">
+        <a (click)="handleNavClick('/products')"><i class="bi bi-box-seam me-2"></i>Products</a>
+      </li>
+      <li class="nav-item animate__animated animate__fadeInDown animate__delay-2s">
+        <a (click)="handleNavClick('/services')"><i class="bi bi-gear-fill me-2"></i>Services</a>
+      </li>
+      <li class="nav-item animate__animated animate__fadeInDown animate__delay-3s">
+        <a (click)="handleNavClick('/insights')"><i class="bi bi-bar-chart-line-fill me-2"></i>Insights</a>
+      </li>
+      <li class="nav-item animate__animated animate__fadeInDown animate__delay-4s">
+        <a (click)="handleNavClick('/admin/dashboard')"><i class="bi bi-shield-lock-fill me-2"></i>Admin</a>
+      </li>
 
-      <!-- 🔽 Search -->
-      <li class="nav-item">
+      <!-- 🔎 Search -->
+      <li class="nav-item search-box">
         <input [(ngModel)]="searchQuery" type="text" placeholder="Search..." />
         <button (click)="redirectToSearch()">
           <i class="bi bi-search"></i>
@@ -31,4 +41,13 @@
       </li>
     </ul>
   </div>
+
+  <!-- 🔔 Ticker -->
+  <div class="navbar-ticker">
+  <div class="ticker-wrapper">
+    <div class="ticker-text">
+      🔔 Welcome to ApasOne.com — Empowering Innovation | 🚀 New Services Launched | 🛒 Explore Our Products!
+    </div>
+  </div>
+</div>
 </nav>

@@ -1,0 +1,572 @@
+
+.about-container {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  padding: 6rem 0;
+  text-align: center;
+  color: white;
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1e293b;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 2px;
+  }
+}
+
+// Mission Section
+.mission-section {
+  padding: 6rem 0;
+  background: #f8fafc;
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+
+    .mission-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #1e293b;
+      }
+
+      p {
+        color: #64748b;
+        line-height: 1.7;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// Journey Timeline
+.journey-section {
+  padding: 6rem 0;
+  background: white;
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+
+      &.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-radius: 50%;
+        top: 15px;
+        border: 3px solid white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &.left {
+        left: 0;
+
+        &::before {
+          content: " ";
+          height: 0;
+          position: absolute;
+          top: 22px;
+          width: 0;
+          z-index: 1;
+          right: 30px;
+          border: medium solid #e2e8f0;
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent #e2e8f0;
+        }
+      }
+
+      &.right {
+        left: 50%;
+
+        &::after {
+          left: -10px;
+        }
+
+        &::before {
+          content: " ";
+          height: 0;
+          position: absolute;
+          top: 22px;
+          width: 0;
+          z-index: 1;
+          left: 30px;
+          border: medium solid #e2e8f0;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent #e2e8f0 transparent transparent;
+        }
+      }
+
+      .timeline-content {
+        padding: 2rem;
+        background: #f8fafc;
+        border-radius: 16px;
+        border: 2px solid #e2e8f0;
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: #3b82f6;
+          transform: scale(1.02);
+        }
+
+        .year {
+          display: inline-block;
+          background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+          color: white;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-weight: 700;
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: #1e293b;
+        }
+
+        p {
+          color: #64748b;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+// Technology Domains
+.tech-domains-section {
+  padding: 6rem 0;
+  background: #f8fafc;
+
+  .domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+
+    .domain-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(50px);
+
+      &.animate {
+        opacity: 1;
+        transform: translateY(0);
+        animation: slideInUp 0.6s ease-out forwards;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .domain-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        .domain-icon {
+          font-size: 2.5rem;
+          margin-right: 1rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #1e293b;
+        }
+      }
+
+      p {
+        color: #64748b;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .tech-tag {
+          background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+          color: #0369a1;
+          padding: 0.4rem 0.8rem;
+          border-radius: 12px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          border: 1px solid #7dd3fc;
+        }
+      }
+    }
+  }
+}
+
+// Education Section
+.education-section {
+  padding: 6rem 0;
+  background: white;
+
+  .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+
+    .education-card {
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(50px);
+
+      &.animate {
+        opacity: 1;
+        transform: translateY(0);
+        animation: slideInUp 0.6s ease-out forwards;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-image {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 3rem;
+        text-align: center;
+        font-size: 4rem;
+      }
+
+      .card-content {
+        padding: 2.5rem;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: #1e293b;
+        }
+
+        p {
+          color: #64748b;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            padding: 0.5rem 0;
+            color: #475569;
+            position: relative;
+            padding-left: 1.5rem;
+
+            &::before {
+              content: '✓';
+              position: absolute;
+              left: 0;
+              color: #10b981;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Founder Section
+.founder-section {
+  padding: 6rem 0;
+  background: #0f172a;
+  color: white;
+
+  .founder-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    .quote-icon {
+      font-size: 6rem;
+      color: #3b82f6;
+      opacity: 0.3;
+      position: absolute;
+      top: -2rem;
+      left: 2rem;
+    }
+
+    blockquote {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      font-style: italic;
+      color: #e2e8f0;
+      margin: 2rem 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .founder-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+
+      .founder-avatar {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        color: #94a3b8;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+.fade-in-left { animation: fadeInLeft 0.8s ease-out forwards; }
+.fade-in-right { animation: fadeInRight 0.8s ease-out forwards; }
+.delay-1 { animation-delay: 0.2s; }
+
+// Mobile Responsiveness
+@media (max-width: 768px) {
+  .about-hero {
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.1rem; }
+  }
+
+  .section-title { font-size: 2rem; }
+
+  .mission-grid,
+  .domains-grid,
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    &::after { left: 31px; }
+
+    .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+
+      &::before { display: none; }
+
+      &.right {
+        left: 0%;
+
+        &::after { left: 21px; }
+      }
+
+      &.left::after { left: 21px; }
+    }
+  }
+
+  .founder-card {
+    .quote-icon {
+      font-size: 4rem;
+      top: -1rem;
+      left: 1rem;
+    }
+
+    blockquote {
+      font-size: 1.1rem;
+    }
+
+    .founder-info {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    .hero-title { font-size: 2rem; }
+  }
+
+  .mission-section,
+  .journey-section,
+  .tech-domains-section,
+  .education-section,
+  .founder-section {
+    padding: 4rem 0;
+  }
+}.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

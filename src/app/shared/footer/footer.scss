@@ -1,7 +1,7 @@
 .footer-container {
   position: relative;
-  background: linear-gradient(to bottom right, #004d61, #00788c);
-  color: white;
+background-color: #426599;
+  color: rgb(15, 14, 14);
   padding: 60px 20px 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
@@ -26,7 +26,7 @@
 .circle.blue {
   width: 300px;
   height: 300px;
-  background: #00bcd4;
+  background: #d7d8de;
   top: -100px;
   left: -100px;
 }
@@ -34,7 +34,7 @@
 .circle.purple {
   width: 200px;
   height: 200px;
-  background: #9c27b0;
+  background: #b9b0bb;
   bottom: -80px;
   right: -80px;
 }
@@ -67,8 +67,8 @@
 }
 
 .logo-bg {
-  background: white;
-  color: #00788c;
+  background: rgb(56, 172, 172);
+  color: #2455de;
   padding: 12px;
   border-radius: 50%;
   display: flex;
@@ -82,7 +82,7 @@
   right: 5px;
   width: 10px;
   height: 10px;
-  background: #00ffc3;
+  background: #dee113;
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
@@ -109,7 +109,7 @@
 
 .brand-subtitle {
   font-size: 14px;
-  color: #b2ebf2;
+  color: #031112;
 }
 
 .brand-desc {
@@ -127,9 +127,9 @@
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #111010;
 }
 
 ul {
@@ -142,7 +142,7 @@ li {
 }
 
 a {
-  color: #b2ebf2;
+  color: #141515;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -162,7 +162,7 @@ input[type="email"] {
 
 button {
   margin-top: 10px;
-  background-color: #00c59c;
+  background-color: #767faa;
   color: white;
   padding: 10px 16px;
   border: none;

@@ -1,21 +1,29 @@
 import { Routes } from '@angular/router';
 
-import { Home } from './pages/home/home';
+
 import { About } from './pages/about/about';
 import { Contact } from './pages/contact/contact';
 import { Products } from './pages/products/products';
-import { Cart } from './pages/cart/cart';
-import { OrderHistory } from './pages/order-history/order-history';
-import { Register } from './pages/register/register';
-import {Data} from './pages/data/data'
+
+
+import { Data } from './pages/data/data';
+import { Dispaly } from './pages/dispaly/dispaly';
+import { Info } from './pages/info/info';
+
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'about', component: About },
+  // ✅ Redirect to 'about' on app start
+  
+
+  { path: '', component: About },
   { path: 'contact', component: Contact },
   { path: 'products', component: Products },
-  { path: 'cart', component: Cart },
-  { path: 'order-history', component: OrderHistory },
-{path: 'data', component: Data},
+  
+ 
+  { path: 'data', component: Data },
+  { path: 'info', component: Info },
+  { path: 'display', component: Dispaly },
+
+  // ✅ Lazy-loaded routes
   {
     path: 'register',
     loadComponent: () => import('./pages/register/register').then(m => m.Register)

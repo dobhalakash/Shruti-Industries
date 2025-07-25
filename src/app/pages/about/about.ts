@@ -13,7 +13,7 @@ import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import {
   trigger,
-  state,
+  state,query,stagger,
   style,
   transition,
   animate
@@ -33,6 +33,17 @@ interface AnimatedElement {
   templateUrl: './about.html',
   styleUrls: ['./about.scss'],
   animations: [
+
+    trigger('staggerAnimation', [
+  transition(':enter', [
+    query(':enter', [
+      style({ opacity: 0, transform: 'translateY(20px)' }),
+      stagger(100, [
+        animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+      ])
+    ], { optional: true })
+  ])
+]),
     trigger('slideUp', [
       state('hidden', style({ opacity: 0, transform: 'translateY(30px)' })),
       state('visible', style({ opacity: 1, transform: 'translateY(0)' })),
@@ -47,6 +58,22 @@ interface AnimatedElement {
       state('hidden', style({ opacity: 0, transform: 'scale(0.8)' })),
       state('visible', style({ opacity: 1, transform: 'scale(1)' })),
       transition('hidden => visible', animate('500ms cubic-bezier(0.4, 0, 0.2, 1)'))
+    ]),
+    trigger('slideRight', [
+      transition(':enter', [
+        style({ transform: 'translateX(-50%)', opacity: 0 }),
+        animate('500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
+      ])
+    ]),
+    trigger('slideLeft', [
+      transition(':enter', [
+      ])
+    ]),
+    trigger('fadeInUp', [
+      transition(':enter', [
+        style({ transform: 'translateY(30px)', opacity: 0 }),
+        animate('500ms ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
+      ])
     ])
   ]
 })
@@ -62,12 +89,40 @@ export class About implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('aboutSticky', { static: false }) aboutSticky!: ElementRef<HTMLElement>;
   @ViewChild('timelineSticky', { static: false }) timelineSticky!: ElementRef<HTMLElement>;
 
+
+
+  techDomains = [
+    {
+      icon: '☁️', name: 'Cloud Computing', description: 'Scalable cloud infrastructure and microservices architecture for modern applications',
+      technologies: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Serverless']
+    },
+    {
+      icon: '🤖', name: 'Artificial Intelligence', description: 'Machine learning and AI solutions for predictive analytics and automation',
+      technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Computer Vision', 'NLP']
+    },
+    {
+      icon: '📱', name: 'Mobile Development', description: 'Cross-platform mobile applications for iOS and Android platforms',
+      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Ionic']
+    },
+    {
+      icon: '🌐', name: 'Web Technologies', description: 'Modern web applications using cutting-edge frameworks and technologies',
+      technologies: ['Angular', 'React', 'Vue.js', 'Node.js', 'TypeScript']
+    },
+    {
+      icon: '🔒', name: 'Cybersecurity', description: 'Advanced security solutions and compliance frameworks for enterprise protection',
+      technologies: ['Zero Trust', 'SIEM', 'Encryption', 'Penetration Testing', 'Compliance']
+    },
+    {
+      icon: '⚛️', name: 'Quantum Computing', description: 'Research and development in quantum algorithms and quantum-safe cryptography',
+      technologies: ['Qiskit', 'Cirq', 'Quantum ML', 'Cryptography', 'Optimization']
+    }
+  ];
+
   constructor(
     private readonly fb: FormBuilder,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
-
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -79,11 +134,12 @@ export class About implements OnInit, OnDestroy, AfterViewInit {
   ngOnInit(): void {
     this.initializeAnimations();
     if (this.isBrowser) this.startAnimationLoop();
+    this.setupAnimations();
   }
 
   ngAfterViewInit(): void {
     if (this.isBrowser) {
-      setTimeout(() => (this.aboutVisible = true), 300);
+      setTimeout(() => (this.aboutVisible = true), 1300);
       this.initializeScrollAnimations();
     }
   }
@@ -127,6 +183,8 @@ export class About implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private initializeScrollAnimations(): void {
+    if (!this.isBrowser) return;
+
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -226,7 +284,6 @@ export class About implements OnInit, OnDestroy, AfterViewInit {
 
   private createConfetti(): void {
     if (!this.isBrowser) return;
-
     const colors = ['#00bcd4', '#4ec5f1', '#00a3a5', '#ffd700'];
     const confettiCount = 50;
 
@@ -272,7 +329,6 @@ export class About implements OnInit, OnDestroy, AfterViewInit {
         clickedElement.style.transform = 'scale(1)';
       }, 150);
     }
-
     console.log(`Navigating to ${item}`);
   }
 
@@ -299,7 +355,26 @@ export class About implements OnInit, OnDestroy, AfterViewInit {
         }, 600);
       }
     }
-
     console.log(`${buttonType} button clicked`);
   }
+
+  private setupAnimations() {
+  if (!this.isBrowser || typeof IntersectionObserver === 'undefined') {
+    console.warn('IntersectionObserver is not available in this environment.');
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  setTimeout(() => {
+    const animatedElements = document.querySelectorAll('.domain-card, .timeline-item');
+    animatedElements.forEach(el => observer.observe(el));
+  }, 100);
+}
 }

@@ -1,64 +1,55 @@
-<div class="carousel-wrapper"> <div id="mainHeroCarouselInner" class="carousel slide slider-container mb-0" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
 
-<!-- Dots / Indicators -->
-<div class="carousel-indicators slider-dots">
-  <button type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-  <button type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  <button type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide-to="2" aria-label="Slide 3"></button>
-</div>
+    
+  <section class="hero-section">
+   <div class="hero-content">
+  <img src="APAS.png" alt="APAS Logo" class="hero-logo fade-in-up" />
 
-<!-- Carousel Items -->
-<div class="carousel-inner slider-wrapper">
-  <div class="carousel-item active">
-    <div class="carousel-overlay"></div>
-    <img src="slider123.png" class="d-block w-100 carousel-img" alt="Slide 1">
-    <div class="carousel-caption-custom">
-      <h2 class="slide-title">Welcome to Sanjivani Transport</h2>
-      <p class="slide-subtitle">Your trusted logistics partner</p>
-    </div>
-  </div>
-  <div class="carousel-item">
-    <div class="carousel-overlay"></div>
-    <img src="slider123.png" class="d-block w-100 carousel-img" alt="Slide 2">
-    <div class="carousel-caption-custom">
-      <h2 class="slide-title">Reliable Transport Solutions</h2>
-      <p class="slide-subtitle">Connecting businesses nationwide</p>
-    </div>
-  </div>
-  <div class="carousel-item">
-    <div class="carousel-overlay"></div>
-    <img src="slider123.png" class="d-block w-100 carousel-img" alt="Slide 3">
-    <div class="carousel-caption-custom">
-      <h2 class="slide-title">Excellence in Logistics</h2>
-      <p class="slide-subtitle">Delivering success every mile</p>
-    </div>
+  <h1 class="hero-title fade-in-up">
+    apasOne.com
+  </h1>
+  <p class="hero-subtitle fade-in-up delay-1">
+    Assured Platform for Advanced Services
+  </p>
+  <div class="hero-buttons fade-in-up delay-2">
+    <button class="primary-btn">Explore Services</button>
+    <button class="secondary-btn">Watch Demo</button>
   </div>
 </div>
 
-<!-- Carousel Controls -->
-<button class="carousel-control-prev" type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide="prev">
-  <span class="carousel-control-prev-icon custom-control-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#mainHeroCarouselInner" data-bs-slide="next">
-  <span class="carousel-control-next-icon custom-control-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Next</span>
-</button>
-</div> </div> 
 
+    <!-- Vehicle Animation -->
+    <div class="road-animation">
+      <div class="road">
+        <div class="road-lines"></div>
+      </div>
+      <div class="vehicle">
+        <svg viewBox="0 0 100 40" class="truck-svg">
+          <rect x="10" y="20" width="50" height="15" fill="#fa7602" rx="3"/>
+          <rect x="65" y="15" width="25" height="20" fill="#1d4ed8" rx="2"/>
+          <circle cx="25" cy="38" r="4" fill="#374151"/>
+          <circle cx="75" cy="38" r="4" fill="#374151"/>
+          <rect x="12" y="22" width="8" height="3" fill="#60a5fa"/>
+          <rect x="67" y="17" width="6" height="4" fill="#93c5fd"/>
+        </svg>
+      </div>
+    </div>
+  </section>  <section class="parallax-section">
+    <h1 class="display-4">Welcome to ApasOne</h1>
+    <p class="lead">The Power of Unity. A Future Solution.</p>
+  </section>
 
 <!-- Animated Background Elements --> <div class="animated-background"> <div class="floating-vehicles"> <i class="bi bi-truck floating-vehicle" style="left: 10%; animation-delay: 0s;"></i> <i class="bi bi-bus-front floating-vehicle" style="left: 30%; animation-delay: 2s;"></i> <i class="bi bi-bicycle floating-vehicle" style="left: 50%; animation-delay: 4s;"></i> <i class="bi bi-scooter floating-vehicle" style="left: 70%; animation-delay: 6s;"></i> <i class="bi bi-truck-front-fill floating-vehicle" style="left: 90%; animation-delay: 8s;"></i> </div> <div class="floating-particles"> <div class="particle" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" [style.left.%]="getRandomPosition()" [style.animation-delay.s]="getRandomDelay()"></div> </div> </div> 
 
 
 <!-- 🧑‍💼 Floating Profiles Section (outside carousel) --> <section class="floating-profiles py-1 my-0"> <div class="profile-float-container d-flex justify-content-around flex-wrap"> 
   
-  <!-- Profile 1 --> <div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'"> <div class="profile-glow">
+  <!-- Profile 1 --> <div class="profile-float text-center" [@slideLeft]="aboutVisible ? 'visible' : 'hidden'"> <div class="profile-glow">
   </div> <img src="ashok.jpg" class="rounded-circle mb-2" alt="Ashok Shinde" />
    <div class="profile-name"> <h6>Ashok Shinde</h6>
      <p>Sanjivani Transport<br><small>Founder & CEO</small></p> </div>
       <div class="profile-badge"> <i class="bi bi-award-fill"></i> </div> </div>
 <!-- Profile 2 -->
-<div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.2s;">
+<div class="profile-float text-center" [@slideLeft]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.2s;">
   <div class="profile-glow"></div>
   <img src="Ram.jpg" class="rounded-circle mb-2" alt="Ram Gadgul" />
   <div class="profile-name">
@@ -71,7 +62,7 @@
 </div>
 
 <!-- Profile 3 -->
-<div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.4s;">
+<div class="profile-float text-center" [@slideLeft]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.4s;">
   <div class="profile-glow"></div>
   <img src="suraj.jpg" class="rounded-circle mb-2" alt="Suraj Dobhal" />
   <div class="profile-name">
@@ -84,7 +75,7 @@
 </div>
 
 <!-- Profile 4 -->
-<div class="profile-float text-center" [@slideRight]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.6s;">
+<div class="profile-float text-center" [@slideLeft]="aboutVisible ? 'visible' : 'hidden'" style="animation-delay: 0.6s;">
   <div class="profile-glow"></div>
   <img src="payal.jpg" class="rounded-circle mb-2" alt="Payal Rajput" />
   <div class="profile-name">
@@ -102,14 +93,7 @@
   <!-- 🚀 Shruti Group Business Verticals -->
 
 <div class="about-container" [@fadeInUp]>
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-title" [@slideInLeft]>About Us</h1>
-      <p class="hero-subtitle" [@slideInRight]>Discover our story, mission, and the passionate team behind our success</p>
-    </div>
-    <div class="hero-background"></div>
-  </section>
+
 
 <section class="tech-About-container" style="font-family: 'Segoe UI', 'Open Sans', sans-serif; letter-spacing: 0.3px; line-height: 1.7;"> <div class="marquee-wrapper"> <div class="tech-marquee"> <div class="tech-item" onclick="location.href='https://example.com/sevaconnect';"> <div class="tech-item-glow"></div> <div class="tech-icon-wrapper"> <i class="bi bi-people-fill" style="font-size: 2rem; color: #004d61;"></i> <div class="icon-pulse"></div> </div> <p><strong>SevaConnect Foundation</strong><br><small>Social Welfare & NGO Initiatives</small></p> <div class="hover-arrow"> <i class="bi bi-arrow-right"></i> </div> </div>
 
@@ -187,6 +171,9 @@
   </div>
 </div>
 </div> </section> <!-- Success Modal --> <div class="modal-overlay" [class.show]="showSuccessModal" (click)="closeModal()"> <div class="success-modal" (click)="$event.stopPropagation()"> <div class="modal-content"> <i class="bi bi-check-circle-fill success-icon"></i> <h3>Success!</h3> <p>{{ successMessage }}</p> <button class="btn btn-primary" (click)="closeModal()"> <i class="bi bi-check"></i> OK </button> </div> </div> </div>
+
+
+
   <!-- Company Overview -->
   <section class="company-overview" [@fadeInUp]>
     <div class="container">
@@ -223,35 +210,28 @@
       </div>
     </div>
   </section>
-
-  <!-- Features Section -->
-  <section class="features-section">
-    <div class="container">
-      <h2 class="section-title center">What Sets Us Apart</h2>
-      <div class="features-grid" [@staggerAnimation]>
-        <div class="feature-card">
-          <div class="feature-icon">🚀</div>
-          <h3 class="feature-title">Innovation First</h3>
-          <p class="feature-description">We push the boundaries of technology to deliver groundbreaking solutions that exceed expectations.</p>
+  
+<section class="tech-domains-section">
+  <div class="container">
+    <h2 class="section-title">Technology Domains</h2>
+    <div class="domains-grid">
+      <div class="domain-card"
+           *ngFor="let domain of techDomains; let i = index"
+           [style.animation-delay]="i * 0.1 + 's'"
+           [class.animate]="true">
+        <div class="domain-header">
+          <div class="domain-icon">{{ domain.icon }}</div>
+          <h3>{{ domain.name }}</h3>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🤝</div>
-          <h3 class="feature-title">Customer Focused</h3>
-          <p class="feature-description">Every decision we make is centered around providing exceptional value and experience to our customers.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3 class="feature-title">Fast & Reliable</h3>
-          <p class="feature-description">Built for speed and reliability, our solutions are designed to perform under any condition.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌍</div>
-          <h3 class="feature-title">Global Reach</h3>
-          <p class="feature-description">Serving customers worldwide with localized support and culturally aware solutions.</p>
+        <p>{{ domain.description }}</p>
+        <div class="tech-stack">
+          <span *ngFor="let tech of domain.technologies" class="tech-tag">{{ tech }}</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Values Section -->
   <section class="values-section">
@@ -287,15 +267,67 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="cta-section" [@fadeInUp]>
-    <div class="container">
+<section class="cta-section" [@fadeInUp]>
+  <div class="container">
+    <div class="cta-wrapper">
+      <!-- Text Content -->
       <div class="cta-content">
-        <h2 class="cta-title">Ready to Work With Us?</h2>
+        <h2 class="cta-title">Why You Should Choose apasOne.com</h2>
         <p class="cta-description">
-          Let's collaborate to bring your vision to life with our expertise and innovative approach.
+          <strong>APAS</strong> stands for <strong>Assured Platform for Advanced Services</strong> — and we live by that promise in everything we do.
+          At <strong>apasOne.com</strong>, we’re committed to delivering top-tier quality in every solution,
+          maintaining consistent performance, timely support, and dependable delivery.
+          More than just a service provider, we genuinely care about your brand, your growth, and your customers.
+          Because when you succeed, we grow with you — <strong>that's the APAS way.</strong>
         </p>
-        <button class="cta-button">Get in Touch</button>
+ 
+      </div>
+
+      <!-- Image Content -->
+      <div class="cta-image">
+        <img src="/APAS.png" alt="APAS Logo" />
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 </div>
+
+ <!-- Contact Form Section -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Get In Touch</h2>
+    <form id="contactForm" class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="service" class="form-label">Service Interested In</label>
+        <select id="service" class="form-select" required>
+          <option selected disabled>Choose...</option>
+          <option>Cloud</option>
+          <option>AI/ML</option>
+          <option>Mobile App</option>
+          <option>Web</option>
+        </select>
+      </div>
+       
+      <button type="submit" class="btn w-100" style="background-color: #426599; color: white;">
+        Submit <i class="bi bi-send"></i>
+      </button>
+    </form>
+  </div>
+</section>
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <!-- Bootstrap + Confetti + Intersection JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
