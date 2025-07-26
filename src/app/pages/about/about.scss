@@ -1223,13 +1223,13 @@
 
     .vehicle {
       position: absolute;
-      bottom: 45px;
-      left: -100px;
+      bottom: 10px;
+      left: -200px;
       animation: vehicleMove 15s linear infinite;
 
       .truck-svg {
-        width: 100px;
-        height: 40px;
+        width: 150px;
+        height: 10px;
         filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
       }
     }
@@ -1832,6 +1832,166 @@ body, html {
       z-index: 9999;
     }.hero-logo {
   max-width: 150px;
-  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 5px;
   animation: fadeInUp 1s ease-in-out;
+}
+.image-card {
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease-in;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-in;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.hero-wrapper-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(6 * 100vw); /* 6 images for loop */
+  height: 100%;
+  animation: slideLeft 60s linear infinite;
+}
+
+.carousel-slide {
+  flex: 0 0 100vw;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes slideLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-300vw); } /* Half of total width for looping */
+}
+
+.slider-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-content.center-content {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.primary-btn, .secondary-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.secondary-btn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+.sky-container {
+  background: linear-gradient(to bottom, #cceeff, #e0f7ff);
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
+
+.plane-banner {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  animation: flyPlane 15s linear infinite;
+}
+
+@keyframes flyPlane {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -700px;
+  }
+}.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+}
+
+.value-title i {
+  margin-right: 8px;
+  color: #0d6efd;
+}
+
+.value-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.value-description {
+  font-size: 1rem;
+  color: #555;
 }

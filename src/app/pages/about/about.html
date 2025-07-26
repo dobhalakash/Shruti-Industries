@@ -1,20 +1,34 @@
 
     
   <section class="hero-section">
-   <div class="hero-content">
-  <img src="APAS.png" alt="APAS Logo" class="hero-logo fade-in-up" />
+ <section class="hero-wrapper-carousel">
+  <div class="slider-overlay"></div>
 
-  <h1 class="hero-title fade-in-up">
-    apasOne.com
-  </h1>
-  <p class="hero-subtitle fade-in-up delay-1">
-    Assured Platform for Advanced Services
-  </p>
-  <div class="hero-buttons fade-in-up delay-2">
-    <button class="primary-btn">Explore Services</button>
-    <button class="secondary-btn">Watch Demo</button>
+  <div class="carousel-track">
+    <div class="carousel-slide" style="background-image: url('slider1.png');"></div>
+    <div class="carousel-slide" style="background-image: url('slider23.png');"></div>
+    <div class="carousel-slide" style="background-image: url('slider31.png');"></div>
+    <!-- Repeat for seamless loop -->
+    <div class="carousel-slide" style="background-image: url('slider1.png');"></div>
+    <div class="carousel-slide" style="background-image: url('slider23.png');"></div>
+    <div class="carousel-slide" style="background-image: url('slider31.png');"></div>
   </div>
-</div>
+
+  <!-- Hero Content -->
+  <div class="hero-content center-content">
+    <h1 class="hero-title fade-in-up">apasOne.com</h1>
+    <p class="hero-subtitle fade-in-up delay-1">
+      Assured Platform for Advanced Services
+    </p>
+    <div class="hero-buttons fade-in-up delay-2">
+      <button class="primary-btn">Explore Services</button>
+      <button class="secondary-btn">Watch Demo</button>
+    </div>
+  </div>
+  
+</section>
+
+
 
 
     <!-- Vehicle Animation -->
@@ -23,16 +37,76 @@
         <div class="road-lines"></div>
       </div>
       <div class="vehicle">
-        <svg viewBox="0 0 100 40" class="truck-svg">
-          <rect x="10" y="20" width="50" height="15" fill="#fa7602" rx="3"/>
-          <rect x="65" y="15" width="25" height="20" fill="#1d4ed8" rx="2"/>
-          <circle cx="25" cy="38" r="4" fill="#374151"/>
-          <circle cx="75" cy="38" r="4" fill="#374151"/>
-          <rect x="12" y="22" width="8" height="3" fill="#60a5fa"/>
-          <rect x="67" y="17" width="6" height="4" fill="#93c5fd"/>
-        </svg>
+   <svg viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" width="1000" height="150">
+  <!-- Wavy Banner with Inner V-Notches (taller height) -->
+  <path d="
+           M40,70 
+           Q50,85 100,70 
+           Q150,55 200,70 
+           Q250,85 300,70 
+           Q350,55 400,70 
+           L420,70 
+           L410,110 
+           L420,150 
+           L400,150 
+           Q350,135 300,150 
+           Q250,165 200,150 
+           Q150,135 100,150 
+           Q50,165 40,150 
+           L60,110 
+           L40,70 Z"
+        fill="#1e293b" stroke="#000" stroke-width="2"/>
+
+  <!-- Banner Text -->
+<text x="240" y="100" text-anchor="middle" font-size="16" fill="#ffffff"
+      font-family="Segoe UI, Arial, sans-serif">
+  <tspan x="240" dy="0" font-weight="600">Our Happy Customer: </tspan>
+  <tspan font-weight="bold">Sanjivani Transport</tspan>
+  <tspan x="240" dy="20" font-weight="600">Recent Project Wrapped with Excellence</tspan>
+</text>
+
+
+  <!-- Threads -->
+  <line x1="400" y1="70" x2="630" y2="95" stroke="#78350f" stroke-width="2"/>
+  <line x1="400" y1="150" x2="630" y2="115" stroke="#78350f" stroke-width="2"/>
+
+  <!-- Long Container -->
+  <rect x="630" y="95" width="200" height="50" fill="#d97706" rx="2"/>
+
+  <!-- Container Ridges -->
+  <g stroke="#92400e" stroke-width="1">
+    <line x1="650" y1="95" x2="650" y2="145"/>
+    <line x1="670" y1="95" x2="670" y2="145"/>
+    <line x1="690" y1="95" x2="690" y2="145"/>
+    <line x1="710" y1="95" x2="710" y2="145"/>
+    <line x1="730" y1="95" x2="730" y2="145"/>
+    <line x1="750" y1="95" x2="750" y2="145"/>
+    <line x1="770" y1="95" x2="770" y2="145"/>
+    <line x1="790" y1="95" x2="790" y2="145"/>
+  </g>
+
+  <!-- Truck Head -->
+  <rect x="840" y="100" width="50" height="45" fill="#1d4ed8" rx="4"/>
+  <rect x="850" y="105" width="22" height="15" fill="#60a5fa" rx="2"/>
+  <line x1="840" y1="125" x2="890" y2="125" stroke="#1e3a8a" stroke-width="2"/>
+  <rect x="830" y="115" width="10" height="10" fill="#6b7280"/>
+
+  <!-- Orange Flag -->
+  <line x1="885" y1="100" x2="885" y2="80" stroke="#92400e" stroke-width="2"/>
+  <polygon points="885,80 900,88 885,96" fill="orange" />
+
+  <!-- Wheels -->
+<circle cx="650" cy="150" r="8" fill="#000000"/>
+<circle cx="700" cy="150" r="8" fill="#000000"/>
+<circle cx="770" cy="150" r="8" fill="#000000"/>
+<circle cx="850" cy="150" r="8" fill="#000000"/>
+<circle cx="880" cy="150" r="8" fill="#000000"/>
+
+</svg>
+
       </div>
     </div>
+    
   </section>  <section class="parallax-section">
     <h1 class="display-4">Welcome to ApasOne</h1>
     <p class="lead">The Power of Unity. A Future Solution.</p>
@@ -181,9 +255,7 @@
         <div class="overview-content">
           <h2 class="section-title">Our Story</h2>
           <p class="company-description">
-            Founded in 2020, Innovation Labs has been at the forefront of 
-            technological innovation. Based in San Francisco, CA, our team of 50+ 
-            dedicated professionals works tirelessly to bring cutting-edge solutions to life.
+           apasOne.com is a multi-platform company with a dynamic and diverse portfolio of services. Since our inception in 2020, we have steadily grown into a trusted name in delivering high-quality solutions across various domains.
           </p>
           <p class="mission-statement">
             <strong>Our Mission:</strong> To create innovative solutions that transform the way people work and live through cutting-edge technology.
@@ -265,31 +337,76 @@
       </div>
     </div>
   </section>
-
-  <!-- Call to Action -->
-<section class="cta-section" [@fadeInUp]>
+<!-- Call to Action Section -->
+<section class="cta-section">
   <div class="container">
-    <div class="cta-wrapper">
-      <!-- Text Content -->
-      <div class="cta-content">
-        <h2 class="cta-title">Why You Should Choose apasOne.com</h2>
-        <p class="cta-description">
-          <strong>APAS</strong> stands for <strong>Assured Platform for Advanced Services</strong> — and we live by that promise in everything we do.
-          At <strong>apasOne.com</strong>, we’re committed to delivering top-tier quality in every solution,
-          maintaining consistent performance, timely support, and dependable delivery.
-          More than just a service provider, we genuinely care about your brand, your growth, and your customers.
-          Because when you succeed, we grow with you — <strong>that's the APAS way.</strong>
-        </p>
- 
+    <h2 class="section-title center">Why Choose Us?</h2>
+    <div class="values-grid" [@staggerAnimation]>
+
+      <div class="value-card">
+        <div class="value-content">
+          <h3 class="value-title"><i class="bi bi-person-badge-fill"></i> Experienced & Certified Trainers</h3>
+          <p class="value-description">
+            Our instructors are seasoned IT professionals with extensive industry experience. Each trainer holds relevant certifications, ensuring you receive accurate, current, and practical knowledge.
+          </p>
+        </div>
       </div>
 
-      <!-- Image Content -->
-      <div class="cta-image">
-        <img src="/APAS.png" alt="APAS Logo" />
+      <div class="value-card">
+        <div class="value-content">
+          <h3 class="value-title"><i class="bi bi-journal-code"></i> Industry-Aligned Curriculum</h3>
+          <p class="value-description">
+      We provide a wide array of IT courses, carefully crafted to support varied learning objectives and career paths. Our curriculum is continuously updated to align with current industry trends and deliver the most in-demand skills.
+          </p>
+        </div>
       </div>
+
+      <div class="value-card">
+        <div class="value-content">
+          <h3 class="value-title"><i class="bi bi-laptop"></i> Practical, Hands-On Learning</h3>
+          <p class="value-description">
+            We emphasize experiential learning. Our coding classes go beyond theory, offering real-world projects, live simulations, and practical exercises to reinforce your skills and build confidence.
+          </p>
+        </div>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-content">
+          <h3 class="value-title"><i class="bi bi-code-slash"></i> Web Development</h3>
+          <p class="value-description">
+            Build fast, responsive, and secure websites with modern technologies like Angular, React, and Spring Boot.
+          </p>
+        </div>
+      </div>
+
+        <div class="value-card">
+        <div class="value-content">
+          <h3 class="value-title"><i class="bi bi-building"></i> Corporate Training</h3>
+          <p class="value-description">
+            Customized IT training for organizations to upskill their workforce in cutting-edge technologies and methodologies.
+          </p>
+        </div>
+      </div>
+
+     <div class="value-card">
+  <div class="value-content">
+    <h3 class="value-title"><i class="bi bi-headset"></i> Support Services</h3>
+    <p class="value-description">
+      We offer dedicated technical and career support to our students and clients. Whether it's resolving project queries, guiding on career decisions, or offering mentorship, our support team is always ready to assist.
+    </p>
+  </div>
+</div>
+
     </div>
   </div>
 </section>
+
+<!-- Logo after CTA Section -->
+<div class="container text-center my-4">
+  <img src="APAS.png" alt="APAS Logo" class="img-fluid" style="max-width: 200px;" />
+</div>
+
+
 
 
 </div>
