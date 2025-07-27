@@ -1,5 +1,9 @@
 /** Enhanced About Component Styling with Animations **/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+* {
+  font-family: 'Inter', 'Segoe UI', 'Poppins', sans-serif;
+}
 /* 🌐 Enhanced Carousel Section */
 .carousel-wrapper {
   position: relative;

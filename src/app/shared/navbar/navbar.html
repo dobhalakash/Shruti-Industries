@@ -3,7 +3,7 @@
 
     <!-- 🔷 Logo -->
     <div class="logo" (click)="handleNavClick('')">
-      <img src="/APAS.png" alt="Shruti Industries Logo" width="80" height="70" />
+      <img src="/APAS.png" alt="apasOne Logo" width="60" height="50" />
       <span>apasOne.com</span>
     </div>
 
@@ -17,24 +17,38 @@
     <!-- 🔗 Navigation Links -->
     <ul class="nav-links" [class.active]="isMenuOpen">
       <li class="nav-item animate__animated animate__fadeInDown">
-        <a (click)="handleNavClick('/')"><i class="bi bi-house-door-fill me-2"></i>Home</a>
+        <a (click)="handleNavClick('/')">
+          <i class="bi bi-house-door-fill me-2"></i>Home
+        </a>
       </li>
       <li class="nav-item animate__animated animate__fadeInDown animate__delay-1s">
-        <a (click)="handleNavClick('/products')"><i class="bi bi-box-seam me-2"></i>Products</a>
+        <a (click)="handleNavClick('/products')">
+          <i class="bi bi-box-seam me-2"></i>Products
+        </a>
       </li>
       <li class="nav-item animate__animated animate__fadeInDown animate__delay-2s">
-        <a (click)="handleNavClick('/services')"><i class="bi bi-gear-fill me-2"></i>Services</a>
+        <a (click)="handleNavClick('/services')">
+          <i class="bi bi-gear-fill me-2"></i>Services
+        </a>
       </li>
       <li class="nav-item animate__animated animate__fadeInDown animate__delay-3s">
-        <a (click)="handleNavClick('/insights')"><i class="bi bi-bar-chart-line-fill me-2"></i>Insights</a>
+        <a (click)="handleNavClick('/insights')">
+          <i class="bi bi-bar-chart-line-fill me-2"></i>Insights
+        </a>
       </li>
       <li class="nav-item animate__animated animate__fadeInDown animate__delay-4s">
-        <a (click)="handleNavClick('/admin/dashboard')"><i class="bi bi-shield-lock-fill me-2"></i>Admin</a>
+        <a (click)="handleNavClick('/admin/dashboard')">
+          <i class="bi bi-shield-lock-fill me-2"></i>Admin
+        </a>
       </li>
 
-      <!-- 🔎 Search -->
+      <!-- 🔍 Search -->
       <li class="nav-item search-box">
-        <input [(ngModel)]="searchQuery" type="text" placeholder="Search..." />
+        <input
+          [(ngModel)]="searchQuery"
+          type="text"
+          placeholder="Search..."
+        />
         <button (click)="redirectToSearch()">
           <i class="bi bi-search"></i>
         </button>
@@ -42,12 +56,10 @@
     </ul>
   </div>
 
-  <!-- 🔔 Ticker -->
+  <!-- 🔔 Scrolling Ticker -->
   <div class="navbar-ticker">
-  <div class="ticker-wrapper">
     <div class="ticker-text">
       🔔 Welcome to ApasOne.com — Empowering Innovation | 🚀 New Services Launched | 🛒 Explore Our Products!
     </div>
   </div>
-</div>
 </nav>

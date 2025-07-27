@@ -14,14 +14,19 @@ import { filter } from 'rxjs/operators';
 })
 export class App {
   showDoors = true;
+  showContent = false;
   showNavbar = false;
 
   constructor(private router: Router) {
-    // Remove door after animation (2s)
-    setTimeout(() => {
-      this.showDoors = false;
-    }, 2000);
+    // ✅ Remove door after animation (2s) and show app content
+   setTimeout(() => {
+  this.showDoors = false;
 
+  const routesWithNavbar = ['/home', '/dashboard', '/about'];
+  const currentUrl = this.router.url;
+  this.showNavbar = routesWithNavbar.includes(currentUrl);
+}, 5000);
+    // ✅ Handle navbar visibility on future navigations
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {

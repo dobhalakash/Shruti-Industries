@@ -21,6 +21,7 @@
   flex-wrap: wrap;
 }
 
+/* 🔷 Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -30,7 +31,7 @@
   cursor: pointer;
 
   img {
-    animation: bounce 1s infinite;
+    animation: bounce 1.5s infinite;
   }
 }
 
@@ -43,6 +44,7 @@
   }
 }
 
+/* 🍔 Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -53,7 +55,8 @@
     width: 25px;
     height: 3px;
     background: #004d61;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    border-radius: 2px;
   }
 
   span.open:nth-child(1) {
@@ -69,6 +72,7 @@
   }
 }
 
+/* 🔗 Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -80,7 +84,7 @@
       text-decoration: none;
       font-weight: 500;
       color: #004d61;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
       cursor: pointer;
 
       &:hover {
@@ -94,6 +98,7 @@
       padding: 5px 10px;
       font-size: 14px;
       margin-right: 6px;
+      outline: none;
     }
 
     button {
@@ -115,36 +120,16 @@
   }
 
   &.active {
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* For Desktop fallback */
   }
 }
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-
-    &.active {
-      display: flex;
-    }
-  }
-}
+/* 🔔 Ticker */
 .navbar-ticker {
   overflow: hidden;
   white-space: nowrap;
-  background: #426599; // Bootstrap blue
-  color: rgb(19, 18, 18);
+  background: #426599;
+  color: #f9f9f9;
   font-weight: 500;
   padding: 6px 12px;
   font-size: 14px;
@@ -167,16 +152,45 @@
     transform: translateX(-100%);
   }
 }
+
+/* 📱 Mobile Styles */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
 
   .nav-links {
-    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background-color: #fff;
+    width: 250px;
+    height: calc(100% - 70px);
+    padding: 20px;
+    gap: 1.5rem;
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  }
 
-    &.active {
-      display: flex;
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-item.search-box {
+    width: 100%;
+
+    input,
+    button {
+      width: 100%;
+      margin: 8px 0;
     }
   }
 }

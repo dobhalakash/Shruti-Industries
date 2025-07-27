@@ -1,42 +1,104 @@
 .door-transition {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 9999;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  animation: openDoors 2s ease forwards;
+  align-items: stretch;
+  pointer-events: none; /* Prevent blocking content underneath */
 }
 
 .door {
   width: 50%;
   height: 100%;
   background-color: #1a1a1a;
-  transition: all 2s ease;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .left-door {
   transform-origin: left center;
-  animation: leftDoorOpen 2s forwards;
+  animation-name: leftDoorOpen;
 }
 
 .right-door {
   transform-origin: right center;
-  animation: rightDoorOpen 2s forwards;
+  animation-name: rightDoorOpen;
 }
 
 @keyframes leftDoorOpen {
-  to {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
     transform: translateX(-100%);
   }
 }
 
 @keyframes rightDoorOpen {
-  to {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
     transform: translateX(100%);
   }
 }
+.door-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  pointer-events: none;
+}
+
+.door {
+  width: 50%;
+  height: 100%;
+  background-image: url('/APAS.png'); /* Your full logo image */
+  background-repeat: no-repeat;
+  background-size: 200% 100%; /* Double width, full height */
+  background-color: #f6f2f2; /* fallback */
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.left-door {
+  transform-origin: left center;
+  animation-name: leftDoorOpen;
+  background-position: left center; /* Show left half */
+}
+
+.right-door {
+  transform-origin: right center;
+  animation-name: rightDoorOpen;
+  background-position: right center; /* Show right half */
+}
+
+@keyframes leftDoorOpen {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rightDoorOpen {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
