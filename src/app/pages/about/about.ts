@@ -131,6 +131,9 @@ export class About implements OnInit, OnDestroy, AfterViewInit {
     });
   }
 
+
+  
+
   ngOnInit(): void {
     this.initializeAnimations();
     if (this.isBrowser) this.startAnimationLoop();

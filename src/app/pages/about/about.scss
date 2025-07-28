@@ -1213,8 +1213,8 @@
           to right,
           transparent 0px,
           transparent 20px,
-          #fbbf24 20px,
-          #fbbf24 40px
+           #3b82f6 20px,
+           #3b82f6 40px
         );
         animation: roadMove 3s linear infinite;
       }
@@ -1993,4 +1993,60 @@ body, html {
 .value-description {
   font-size: 1rem;
   color: #555;
+}
+.callback-container {
+  position: absolute;
+  top: 100px; // Adjust based on navbar height
+  left: 0;
+  z-index: 999;
+  padding: 10px;
+}
+
+.callback-box {
+  width: 300px;
+  background-color: linear-gradient(45deg, #426599 , #4ec5f1, #426599);
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 4px 12px rgba(153, 152, 152, 0.2);
+  border-left: 6px solid #2196f3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.callback-box h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2196f3;
+}
+
+.callback-box input,
+.callback-box select,
+.callback-box textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.callback-box textarea {
+  height: 60px;
+  resize: none;
+}
+
+.callback-box button {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.callback-box button:hover {
+  background-color: #1976d2;
 }

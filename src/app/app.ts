@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar';
 import { FooterComponent } from './shared/footer/footer';
@@ -17,15 +17,18 @@ export class App {
   showContent = false;
   showNavbar = false;
 
-  constructor(private router: Router) {
-    // ✅ Remove door after animation (2s) and show app content
-   setTimeout(() => {
-  this.showDoors = false;
+  @ViewChild('cursor') cursorRef!: ElementRef;
 
-  const routesWithNavbar = ['/home', '/dashboard', '/about'];
-  const currentUrl = this.router.url;
-  this.showNavbar = routesWithNavbar.includes(currentUrl);
-}, 5000);
+  constructor(private router: Router) {
+    // ✅ Remove door after animation (5s) and show app content
+    setTimeout(() => {
+      this.showDoors = false;
+
+      const routesWithNavbar = ['/home', '/dashboard', '/about'];
+      const currentUrl = this.router.url;
+      this.showNavbar = routesWithNavbar.includes(currentUrl);
+    }, 5000);
+
     // ✅ Handle navbar visibility on future navigations
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -37,5 +40,15 @@ export class App {
         const routesWithNavbar = ['/home', '/dashboard', '/about'];
         this.showNavbar = routesWithNavbar.includes(event.urlAfterRedirects);
       });
+  }
+
+  // ✅ Update cursor position on mouse move
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    if (this.cursorRef) {
+      const cursor = this.cursorRef.nativeElement;
+      cursor.style.left = `${event.clientX}px`;
+      cursor.style.top = `${event.clientY}px`;
+    }
   }
 }

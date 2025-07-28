@@ -1,13 +1,14 @@
 
 <!-- Door Opening Animation -->
-<div *ngIf="showDoors" class="door-transition">
-  <div class="door left-door"></div>
-  <div class="door right-door"></div>
+
+
+<div class="cursor-container">
+  <div class="custom-cursor main" #cursor></div>
+
 </div>
-
-
 
 <!-- Actual Content -->
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+

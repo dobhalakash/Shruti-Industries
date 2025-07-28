@@ -63,17 +63,16 @@
 .door {
   width: 50%;
   height: 100%;
-  background-image: url('/APAS.png'); /* Your full logo image */
+  background-image: url('/APAS1.png'); /* Your full logo image */
   background-repeat: no-repeat;
   background-size: 200% 100%; /* Double width, full height */
-  background-color: #f6f2f2; /* fallback */
+  background-color: #0f0b0b; /* fallback */
   animation-duration: 5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
 
 .left-door {
-  transform-origin: left center;
   animation-name: leftDoorOpen;
   background-position: left center; /* Show left half */
 }
@@ -102,3 +101,58 @@
   }
 }
 
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #00fff2;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  transition: transform 0.05s ease;
+}
+
+.cursor-container .main {
+  animation: glowPulse 2s infinite ease-in-out, zoomPulse 2s infinite ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 255, 242, 0.7),
+              0 0 20px rgba(0, 255, 242, 0.5),
+              0 0 30px rgba(0, 255, 242, 0.3);
+}
+
+.cursor-container .ring1 {
+  opacity: 0.6;
+  border-color: #00f5a8;
+  box-shadow: 0 0 15px rgba(0, 245, 168, 0.5);
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+.cursor-container .ring2 {
+  opacity: 0.3;
+  border-color: #00b3ff;
+  box-shadow: 0 0 25px rgba(0, 179, 255, 0.4);
+  animation: glowPulse 4s infinite ease-in-out;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 242, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 242, 1);
+  }
+}
+
+/* Zoom in/out breathing animation */
+@keyframes zoomPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
