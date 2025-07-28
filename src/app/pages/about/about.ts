@@ -36,13 +36,12 @@ interface AnimatedElement {
 
     trigger('staggerAnimation', [
   transition(':enter', [
-    query(':enter', [
-      style({ opacity: 0, transform: 'translateY(20px)' }),
-      stagger(100, [
-        animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+        style({ opacity: 0, transform: 'translateY(30px)' }),
+        animate('800ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease-in', style({ opacity: 0, transform: 'translateY(30px)' }))
       ])
-    ], { optional: true })
-  ])
 ]),
     trigger('slideUp', [
       state('hidden', style({ opacity: 0, transform: 'translateY(30px)' })),
@@ -78,6 +77,8 @@ interface AnimatedElement {
   ]
 })
 export class About implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('sectionRef') sectionRef!: ElementRef;
+  inView: boolean = false;
   aboutVisible = false;
   contactForm: FormGroup;
   showSuccessModal = false;

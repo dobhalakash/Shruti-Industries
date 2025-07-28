@@ -2050,3 +2050,41 @@ body, html {
 .callback-box button:hover {
   background-color: #1976d2;
 }
+.overview-content {
+  flex: 1;
+}
+
+.stats-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.counter-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.counter-item:hover {
+  transform: translateY(-5px);
+}
+
+.counter-item .stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e88e5; /* Primary color */
+  margin-bottom: 0.5rem;
+}
+
+.counter-item .stat-label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.text-center {
+  text-align: center;
+}
